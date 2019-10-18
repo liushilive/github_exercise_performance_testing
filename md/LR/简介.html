@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>性能测试相关 - LoadRunner 简介</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../..\../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../..\../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../..\../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../..\../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../..\../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li>
+<ul class="articles"><li class="chapter" data-level="1.1" data-path="../../index.html"><a href="../../index.html"><b>1.1.</b>介绍</a></li>
+<li class="chapter" data-level="1.2" data-path="../performance/性能测试类型.html"><a href="../performance/性能测试类型.html"><b>1.2.</b>性能测试类型</a></li>
+<li class="chapter" data-level="1.3" data-path="../performance/软件性能的基本指标.html"><a href="../performance/软件性能的基本指标.html"><b>1.3.</b>软件性能的基本指标</a></li>
+<li class="chapter" data-level="1.4" data-path="../performance/软件性能测试方法论.html"><a href="../performance/软件性能测试方法论.html"><b>1.4.</b>软件性能测试方法论</a></li>
+<li class="chapter" data-level="1.5" data-path="../performance/性能测试工具.html"><a href="../performance/性能测试工具.html"><b>1.5.</b>性能测试工具</a></li>
+<li class="chapter active" data-level="1.6" data-path="简介.html"><a href="简介.html"><b>1.6.</b>LoadRunner 简介</a></li></ul>
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../..">LoadRunner 简介</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>LoadRunner</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>基本组成</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>2. </b>LoadRunner 术语</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>3. </b>LoadRunner Vuser 技术</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>4. </b>LoadRunner 测试过程</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>LoadRunner</h1>
+<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 基本组成</h2>
+<p>LoadRunner 主要由 <code class="language-vim">Virtual User Generator</code>、<code class="language-vim">Controller</code>、<code class="language-vim">Load Generator</code>和<code class="language-vim">Analysis</code>四部分构成。</p>
+<ul>
+<li>
+<p><code class="language-vim">Virtual User Generator</code>：<code class="language-vim">VUGen</code>：<code class="language-vim">虚拟用户脚本生成器</code></p>
+<p>录制最终用户业务流程并创建自动化性能测试脚本，即 Vuser 脚本。</p>
+<p>录制期间， VuGen 将监控数据库的客户端，并跟踪用户发送到服务器以及从服务器接收的所有请求，VuGen 将自动生成精确建模并模拟实际情况的函数，而无需手动编写应用程序对服务器的 API 函数调用。</p>
+<p><a data-lightbox="1" href="../..\lsbook_import_img\2019-10-10-10-17-31.png"><img src="../..\lsbook_import_img\2019-10-10-10-17-31.png" alt="录制原理" title="录制原理" /></a></p>
+<p>回放期间，Vuser 脚本通过执行对服务器 API 的调用，直接与服务器通信。当 Vuser 直接与服务器通信时，客户端接口不需要系统资源。这样，可以在一个工作站上同时运行大量 Vuser，进而可以仅使用几台测试计算机来模拟较重的服务器负载。</p>
+<p><a data-lightbox="2" href="../..\lsbook_import_img\2019-10-10-10-17-54.png"><img src="../..\lsbook_import_img\2019-10-10-10-17-54.png" alt="回放原理" title="回放原理" /></a></p>
+<p>此外，由于 Vuser 脚本不依赖于客户端软件，因此即使客户端软件的用户界面尚未完全开发好也可以使用 Vuser 检查服务器性能。</p>
+<p>使用 VuGen，可以将脚本作为独立测试运行。通过从 VuGen 运行脚本可以了解 Vuser 的行为方式以及需要进行哪些改进，因此对于调试很有帮助。</p>
+<p>VuGen 只能在 Windows 平台上录制 Vuser 脚本。但录制的 Vuser 脚本可在 Windows 和 UNIX 平台上运行。</p>
+</li>
+<li>
+<p><code class="language-vim">Controller</code>：<code class="language-vim">控制器</code></p>
+<p>组织、驱动、管理并监控负载测试。</p>
+</li>
+<li>
+<p><code class="language-vim">Load Generator</code>：<code class="language-vim">负载生成器</code></p>
+<p>执行场景时， LoadRunner Controller 将该场景中的每个 Vuser 分散到<code class="language-vim">负载生成器</code>。负载生成器是执行 Vuser 脚本，从而使 Vuser 可以模拟实际用户操作的计算机。</p>
+</li>
+<li>
+<p><code class="language-vim">Analysis</code>：<code class="language-vim">性能分析器</code></p>
+<p>用于查看、剖析和比较性能结果。</p>
+</li>
+</ul>
+<h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. LoadRunner 术语</h2>
+<ul>
+<li>
+<p>场景（Scenario）</p>
+<p>使用 LoadRunner 可以将应用程序性能测试需求划分为多个<code class="language-vim">场景</code>。场景定义了每个测试会话中发生的事件。举例来说，场景定义并控制要模拟的用户的数量及其执行的操作，以及他们运行模拟操作所用的计算机。</p>
+</li>
+<li>
+<p>Vuser</p>
+<p>在场景中， LoadRunner 用虚拟用户或 <code class="language-vim">Vuser</code> 代替<code class="language-vim">实际用户</code>。运行场景时，Vuser 模拟实际用户的操作来使用应用程序。一台工作站只能容纳一个实际用户，而多个 Vuser 可以同时运行在同一台工作站上。实际上，一个场景可以包含几十、几百甚至几千个 Vuser。</p>
+</li>
+<li>
+<p>Vuser 脚本</p>
+<p>Vuser 在场景中执行的操作是用 Vuser 脚本描述的。运行场景时，每个 Vuser 都执行 <code class="language-vim">Vuser 脚本</code>。Vuser 脚本中包含度量并记录应用程序组件的性能的函数。</p>
+</li>
+<li>
+<p>事务</p>
+<p>要度量服务器的性能，需要定义<code class="language-vim">事务</code>。事务代表度量过程中我们感兴趣的一个或一系列操作。在 Vuser 脚本中，可以通过嵌入适当的 <code class="language-vim">start</code> 和 <code class="language-vim">end</code> 事务语句的脚本段来定义事务。例如，可以定义某个事务，用于测量服务器处理查看帐户收支情况的请求的时间，以及在 ATM 上显示收支信息的时间。</p>
+</li>
+<li>
+<p>集合点</p>
+<p>可以在 Vuser 脚本中插入<code class="language-vim">集合点</code>来模拟服务器上较重的用户负载。<code class="language-vim">集合点</code>指示 Vuser 在测试执行期间等待，直到多个 Vuser 在某一点到达，以使他们可以并行执行某个任务。例如，要模拟银行服务器的峰值负载，可以插入一个集合点来指示 100 个 Vuser 同时往他们的帐户存入现金。</p>
+</li>
+</ul>
+<h2 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>3. LoadRunner Vuser 技术</h2>
+<p>在每个 Windows 负载生成器上，需要安装<code class="language-vim">远程代理调度程序（进程）</code>和 LoadRunner 代理。</p>
+<p><a data-lightbox="3" href="../..\lsbook_import_img\2019-10-07-12-51-29.png"><img src="../..\lsbook_import_img\2019-10-07-12-51-29.png" alt="vuser" title="vuser" /></a></p>
+<ul>
+<li>
+<p>远程代理调度程序（进程）</p>
+<p>远程代理调度程序（进程）可使 Controller 在负载生成器计算机上启动应用程序。</p>
+</li>
+<li>
+<p>代理</p>
+<p>LoadRunner 代理可使 Controller 和负载生成器互相通信。运行场景时，Controller 指示远程代理调度程序（进程）启动 LoadRunner 代理。该代理根据从 Controller 接收到的指令来初始化、运行、暂停和停止各个 Vuser。同时，该代理还将各个 Vuser 的状态数据传回 Controller。</p>
+</li>
+</ul>
+<h2 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>4. LoadRunner 测试过程</h2>
+<p>负载测试一般包括 5 个阶段：<code class="language-vim">规划测试</code>、<code class="language-vim">创建 Vuser 脚本</code>、<code class="language-vim">创建场景</code>、<code class="language-vim">运行场景</code>、<code class="language-vim">监视场景</code>和<code class="language-vim">分析测试结果</code>。</p>
+<ul>
+<li>
+<p>规划测试</p>
+<p>要成功地进行负载测试，需要制定完整的测试计划。定义明确的测试计划将确保制定的 LoadRunner 场景能完成负载测试目标。</p>
+</li>
+<li>
+<p>创建 Vuser 脚本</p>
+<p>Vuser 模拟实际用户与基于 Web 的应用程序的交互。Vuser 脚本包含场景执行过程中每个虚拟用户执行的操作。</p>
+<p>VUGen 录制最终用户活动生成自动化测试脚本。</p>
+</li>
+<li>
+<p>创建场景</p>
+<p>场景描述测试会话期间发生的事件。场景中包括运行 Vuser 的计算机的列表、运行 Vuser 脚本的列表以及在场景执行期间运行的指定数量的 Vuser 或 Vuser 组。可以使用 LoadRunner Controller 创建场景。</p>
+<ul>
+<li>
+<p>创建手动场景</p>
+<p>可以通过定义 Vuser 组（将为这些组分配一些单独的 Vuser）、Vuser 脚本和运行这些脚本的负载生成器来创建场景。</p>
+<p>也可以使用“百分比模式”来创建场景，在这种模式下可以定义场景中要使用的 Vuser 的总数、负载生成器计算机以及要分配给每个 Vuser 脚本的 Vuser 占 Vuser 总数的百分比。</p>
+</li>
+<li>
+<p>创建面向目标的场景</p>
+<p>对于 Web 测试，可以创建面向目标的场景，在其中定义希望达到的测试目标。LoadRunner 将基于这些目标自动创建场景。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>运行场景</p>
+<p>使用 LoadRunner Controller 驱动、管理并监控负载测试</p>
+<p>可以指示多个 Vuser 同时执行任务，以模拟服务器上的用户负载。可以通过增加或减少同时执行任务的 Vuser 的数量来设置负载级别。</p>
+</li>
+<li>
+<p>监视场景</p>
+<p>可以使用 LoadRunner 联机运行时、事务、系统资源、Web 资源、Web 服务器资源、Web 应用程序服务器资源、数据库服务器资源、网络延时、流媒体资源、防火墙服务器资源、ERP/CRM 服务器资源、Java 性能、应用程序部署和中间件性能监视器来监视场景的执行。</p>
+</li>
+<li>
+<p>分析测试结果</p>
+<p>在场景执行期间，LoadRunner 将记录不同负载下的应用程序性能。可以使用 LoadRunner Analysis 的图和报告来分析应用程序的性能。</p>
+</li>
+</ul>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: 性能测试工具" class="navigation navigation-prev" href="../performance/性能测试工具.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn",
+                "previous_page_link": "../performance/性能测试工具.html",
+                "next_page_link": ""
+            },
+            "basePath": "../..",
+            "js": {'prism': ['../..\\../asserts/lsbook/prismjs/clipboard.min.js', '../..\\../asserts/lsbook/prismjs/prism.js']}
+        });
+    });
+</script>
+</div>
+
+<script src="../..\../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../..\../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../..\../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../..\../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>
