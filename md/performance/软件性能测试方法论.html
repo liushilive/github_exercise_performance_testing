@@ -65,7 +65,7 @@
                         <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>软件性能测试方法论</h1>
 <p>性能测试方法主要包括 SEI 负载测试计划过程和 RBI 方法。</p>
 <h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. SEI 负载测试计划过程</h2>
-<p>SEI 负载测试计划过程（SEI Load Testing Planning Process）是一个关注于负载测试计划的方法，其目标是产生“清晰、易理解、可验证的负载测试计划”。SEI 负载测试计划过程包括 6 个关注的区域（Area）：<code class="language-vim">目标</code>、<code class="language-vim">用户</code>、<code class="language-vim">用例</code>、<code class="language-vim">生产环境</code>、<code class="language-vim">测试环境</code>和<code class="language-vim">测试场景</code>。</p>
+<p>SEI 负载测试计划过程（SEI Load Testing Planning Process）是一个关注于负载测试计划的方法，其目标是产生<code class="language-vim">清晰、易理解、可验证的负载测试计划</code>。SEI 负载测试计划过程包括 6 个关注的区域（Area）：<code class="language-vim">目标</code>、<code class="language-vim">用户</code>、<code class="language-vim">用例</code>、<code class="language-vim">生产环境</code>、<code class="language-vim">测试环境</code>和<code class="language-vim">测试场景</code>。</p>
 <p>SEI 负载测试计划过程将以这 6 个区域作为负载测试计划需要重点关注和考虑的内容，其重点关注以下几个方面的内容。</p>
 <ol>
 <li>
@@ -96,11 +96,11 @@
 <p>采用<code class="language-vim">吞吐量</code>测试可以更快速地定位问题。</p>
 </li>
 </ol>
-<p>RBI 方法首先访问服务器上的“小页面”和“简单应用”，从应用服务器、网络等基础的层次上了解系统吞吐量表现；其次选择不同的场景，设定不同的并发用户数，使其吞吐量保持基本一致的增长趋势，通过不断增加并发用户数和吞吐量，观察系统的性能表现。</p>
-<p>在确定具体的性能瓶颈时，RBI 将性能瓶颈的定位按照一种“自上而下”的分析方式进行分析，首先确定是由<code class="language-vim">并发</code>还是由<code class="language-vim">吞吐量</code>引发的性能表现限制，然后从<code class="language-vim">网络</code>、<code class="language-vim">数据库</code>、<code class="language-vim">应用服务器</code>和<code class="language-vim">代码</code>本身 4 个环节确定系统性能具体的瓶颈。</p>
+<p>RBI 方法首先访问服务器上的<code class="language-vim">小页面</code>和<code class="language-vim">简单应用</code>，从应用服务器、网络等基础的层次上了解系统吞吐量表现；其次选择不同的场景，设定不同的并发用户数，使其吞吐量保持基本一致的增长趋势，通过不断增加并发用户数和吞吐量，观察系统的性能表现。</p>
+<p>在确定具体的性能瓶颈时，RBI 将性能瓶颈的定位按照一种<code class="language-vim">自上而下</code>的分析方式进行分析，首先确定是由<code class="language-vim">并发</code>还是由<code class="language-vim">吞吐量</code>引发的性能表现限制，然后从<code class="language-vim">网络</code>、<code class="language-vim">数据库</code>、<code class="language-vim">应用服务器</code>和<code class="language-vim">代码</code>本身 4 个环节确定系统性能具体的瓶颈。</p>
 <p>RBI 方法在性能瓶颈的定位过程中能发挥良好的作用，其对性能分析和瓶颈定位的方法值得借鉴，但其也不是完整的性能测试过程。</p>
 <h2 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>3. 性能测试基本过程</h2>
-<p>面试性能测试时，经常会问一个问题：“能否简单地介绍一下性能测试的过程？”多数人的回答都不咋地，原因是很多人不清楚性能测试以至于回答问题的思路混乱。其实，大家在应聘性能测试职位时，必须要清楚这个职位是具体做哪些工作的，并且按照工作的流程把每一个环节都表述清楚。</p>
+<p>面试性能测试时，经常会问一个问题：<code class="language-vim">能否简单地介绍一下性能测试的过程？</code>多数人的回答都不咋地，原因是很多人不清楚性能测试以至于回答问题的思路混乱。其实，大家在应聘性能测试职位时，必须要清楚这个职位是具体做哪些工作的，并且按照工作的流程把每一个环节都表述清楚。</p>
 <p>下面结合过往公司实际工作流程与阿里云性能测试流程给大家介绍一下，性能测试的过程到底是如何进行的。</p>
 <p>本体系将性能测试工作共分为：<code class="language-vim">需求阶段</code>、<code class="language-vim">准备阶段</code>、<code class="language-vim">执行阶段</code>、<code class="language-vim">报告阶段</code>、<code class="language-vim">总结阶段</code> 5 部分。力求简单、实用、有效的指导当前的性能测试工作活动。</p>
 <table>
@@ -111,7 +111,6 @@
 <th align="left">执行阶段</th>
 <th align="left">报告阶段</th>
 <th align="left">总结阶段</th>
-<th align="left"></th>
 </tr>
 </thead>
 <tbody>
@@ -121,13 +120,11 @@
 <td align="left">按照测试计划中的测试内容规定项目执行各项测试</td>
 <td align="left">编制《性能测试分析报告》汇报测试结果以及对系统性能的评估</td>
 <td align="left">编制《性能测试总结报告》，总结性能测试过程、方法、经验、教训等，改进工作流程的建议等</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left">项目经理针对客户的系统，需着急相关的人员开项目启动会</td>
 <td align="left">环境搭建准备，由客户方实施，并通过冒烟测试</td>
 <td align="left">详细记录测试工作步骤以及测试结果</td>
-<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -137,7 +134,6 @@
 <td align="left">根据测试结果和性能跟踪数据、监控数据进行系统瓶颈分析</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left">制定详细的测试和优化分析计划并通过广泛的评审</td>
@@ -145,11 +141,10 @@
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"></td>
 </tr>
 </tbody>
 </table>
-<p>总结整个性能测试流程体系，共包括 5 大阶段、7 项主要活动。</p>
+<p>总结整个性能测试流程体系，共包括 <code class="language-vim">5</code> 大阶段、<code class="language-vim">7</code> 项主要活动。</p>
 <ul>
 <li>
 <p>5 大阶段：<code class="language-vim">需求阶段</code>、<code class="language-vim">准备阶段</code>、<code class="language-vim">执行阶段</code>、<code class="language-vim">报告阶段</code>、<code class="language-vim">总结阶段</code></p>
@@ -226,8 +221,8 @@
 <li>
 <p>我们需要对所有的功能都进行性能测试</p>
 <p>每位用户都希望自己公司应用的系统有良好的性能，从客户的角度讲，肯定都是希望所有的系统应用都有好的系统性能表现，那么是不是所有的功能都要经过性能测试呢？答案当然是否定的，通常性能测试周期较长。</p>
-<p>首先，全部功能模块都进行性能测试需要有非常长的时间；其次，根据 80-20 原则，通常系统用户经常使用的功能模块大概占用系统整个功能模块数目的 20%，像“参数设置”等类似的功能模块，通常仅需要在应用系统时管理员进行一次性设置，针对这类设置进行性能测试也是没有任何意义的。</p>
-<p>通常，性能测试是由客户提出需求内容，性能测试人员针对客户的需求进行系统和专业的分析后，提出相应的性能测试计划、解决方案、性能测试用例等与用户共同分析确定最终的性能测试计划、解决方案、性能测试用例等，性能测试的最终测试内容通常也是结合客户真实的应用场景，客户应用最多，使用最频繁的功能。所以说，“对所有的功能都进行性能测试”是不切实际也是不科学的做法，作为性能测试人员必须清楚。</p>
+<p>首先，全部功能模块都进行性能测试需要有非常长的时间；其次，根据 <code class="language-vim">80-20</code> 原则，通常系统用户经常使用的功能模块大概占用系统整个功能模块数目的 <code class="language-vim">20%</code>，像<code class="language-vim">参数设置</code>等类似的功能模块，通常仅需要在应用系统时管理员进行一次性设置，针对这类设置进行性能测试也是没有任何意义的。</p>
+<p>通常，性能测试是由客户提出需求内容，性能测试人员针对客户的需求进行系统和专业的分析后，提出相应的性能测试计划、解决方案、性能测试用例等与用户共同分析确定最终的性能测试计划、解决方案、性能测试用例等，性能测试的最终测试内容通常也是结合客户真实的应用场景，客户应用最多，使用最频繁的功能。所以说，<code class="language-vim">对所有的功能都进行性能测试</code>是不切实际也是不科学的做法，作为性能测试人员必须清楚。</p>
 </li>
 <li>
 <p>系统用户登录响应时间小于 3 秒钟</p>
@@ -247,11 +242,11 @@
 <li>
 <p><code class="language-vim">80/20</code> 原则</p>
 <p>所谓 <code class="language-vim">80/20</code> 原则，即每个工作日中 <code class="language-vim">80%</code> 的业务在 <code class="language-vim">20%</code> 的时间内完成。</p>
-<p>举例：每年业务量集中在 8 个月，每个月 20 个工作日，每个工作日 8 小时，即每天 80% 的业务在 1.6 小时完成。去年全年处理业务约 100 万笔，其中 15% 的业务处理中每笔业务需对应用服务器提交 7 次请求，70% 的业务处理中每笔业务需对应用服务器提交 5 次请求，其余 15% 的业务处理中每笔业务需对应用服务器提交 3 次请求。根据以往的统计结果，每年的业务增量为 15%。考虑到今后 3 年业务发展的需要，测试需按现有业务量的 2 倍进行。</p>
+<p>举例：每年业务量集中在 <code class="language-vim">8</code> 个月，每个月 <code class="language-vim">20</code> 个工作日，每个工作日 <code class="language-vim">8</code> 小时，即每天 <code class="language-vim">80%</code> 的业务在 <code class="language-vim">1.6</code> 小时完成。去年全年处理业务约 <code class="language-vim">100</code> 万笔，其中 <code class="language-vim">15%</code> 的业务处理中每笔业务需对应用服务器提交 <code class="language-vim">7</code> 次请求，<code class="language-vim">70%</code> 的业务处理中每笔业务需对应用服务器提交 <code class="language-vim">5</code> 次请求，其余 <code class="language-vim">15%</code> 的业务处理中每笔业务需对应用服务器提交 <code class="language-vim">3</code> 次请求。根据以往的统计结果，每年的业务增量为 <code class="language-vim">15%</code>。考虑到今后 <code class="language-vim">3</code> 年业务发展的需要，测试需按现有业务量的 <code class="language-vim">2</code> 倍进行。</p>
 <p><code class="language-vim">每年总的请求数 =(100×15%×7 + 100×70%×5 + 100×15%×3) × 2 = 1000（万次/年）</code></p>
 <p><code class="language-vim">每天请求数 = 1000/(20×8) = 6.25（万次 / 天）</code></p>
 <p><code class="language-vim">每秒请求数 = (62500×80%)/(8×20%×3600) = 8.68（次 / 秒）</code></p>
-<p>即服务器处理请求的能力应达到 9 次 / 秒。</p>
+<p>即服务器处理请求的能力应达到 <code class="language-vim">9 次/秒</code>。</p>
 </li>
 </ol>
 

@@ -97,19 +97,27 @@
 <ol>
 <li>
 <p>网络时间</p>
-<p>客户端发出请求首先通过网络来到 Web Server 上（消耗时间为 N1）；Web Server 将处理后的请求发送给 App Server（消耗时间为 N2）；App Server 将操作数据指令发送给 Database（消耗时间为 N3）；Database 将查询结果数据发送回 App Server（消耗时间为 N4）；App Server 将处理后的页面发送给 Web Server（消耗时间为 N5）；最后 Web Server 将 HTML 转发到客户端（消耗时间为 N6）。这里的 Nx 都是网络传输上的时间开销，没有计算业务处理所需要花费的时间。</p>
+<ul>
+<li><code class="language-vim">客户端</code>发出<code class="language-vim">请求</code>首先通过网络来到 <code class="language-vim">Web Server</code> 上（消耗时间为 <code class="language-vim">N1</code>）</li>
+<li><code class="language-vim">Web Server</code> 将<code class="language-vim">处理后的请求</code>发送给 <code class="language-vim">App Server</code>（消耗时间为 <code class="language-vim">N2</code>）</li>
+<li><code class="language-vim">App Server</code> 将<code class="language-vim">操作数据指令</code>发送给 <code class="language-vim">Database</code>（消耗时间为 <code class="language-vim">N3</code>）</li>
+<li><code class="language-vim">Database</code> 将<code class="language-vim">查询结果数据</code>发送回 <code class="language-vim">App Server</code>（消耗时间为 <code class="language-vim">N4</code>）</li>
+<li><code class="language-vim">App Server</code> 将<code class="language-vim">处理后的页面</code>发送给 <code class="language-vim">Web Server</code>（消耗时间为 <code class="language-vim">N5</code>）</li>
+<li>最后 <code class="language-vim">Web Server</code> 将 <code class="language-vim">HTML</code> 转发到<code class="language-vim">客户端</code>（消耗时间为 <code class="language-vim">N6</code>）</li>
+</ul>
+<p>这里的 <code class="language-vim">Nx</code> 都是网络传输上的<code class="language-vim">时间开销</code>，没有计算业务处理所需要花费的时间。</p>
 </li>
 <li>
 <p>服务器处理时间</p>
-<p>另外还要考虑各个服务器处理所需要的时间 WT、AT、DT。</p>
+<p>另外还要考虑各个服务器处理所需要的时间 <code class="language-vim">WT</code>、<code class="language-vim">AT</code>、<code class="language-vim">DT</code>。</p>
 </li>
 <li>
 <p>网络延迟</p>
-<p>除了上面两种时间开销，还要考虑网络延迟的问题。</p>
+<p>除了上面两种时间开销，还要考虑<code class="language-vim">网络延迟</code>的问题。</p>
 </li>
 </ol>
 <p>所以最终的响应时间组成为：</p>
-<p><code class="language-vim">响应时间 = 网络延迟时间 + WT+AT+DT +（N1+N2+N3）+（N4+N5+N6）+ WT+AT+DT</code></p>
+<p><code class="language-vim">响应时间 = 网络延迟时间 + WT+AT+DT + N1+N2+N3 + N4+N5+N6 + WT+AT+DT</code></p>
 <ul>
 <li>
 <p>参考标准</p>
@@ -123,13 +131,19 @@
 </li>
 </ul>
 <h3 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>1.2. 系统处理能力</h3>
-<p>系统处理能力是指系统在利用系统硬件平台和软件平台进行信息处理的能力。系统处理能力通过<code class="language-vim">系统每秒钟能够处理的交易数量</code>来评价，交易有两种理解：一是业务人员角度的一笔业务过程；二是系统角度的一次交易申请和响应过程。前者称为<code class="language-vim">业务交易过程</code>，后者称为<code class="language-vim">事务</code>。两种交易指标都可以评价应用系统的处理能力。一般的建议与系统交易日志保持一致，以便于统计业务量或者交易量。系统处理能力指标是技术测试活动中重要指标。</p>
+<p>系统处理能力是指系统在利用系统硬件平台和软件平台进行信息处理的能力。</p>
+<p>系统处理能力通过<code class="language-vim">系统每秒钟能够处理的交易数量</code>来评价，交易有两种理解：</p>
+<ul>
+<li>一是业务人员角度的一笔业务过程；</li>
+<li>二是系统角度的一次交易申请和响应过程。</li>
+</ul>
+<p>前者称为<code class="language-vim">业务交易过程</code>，后者称为<code class="language-vim">事务</code>。两种交易指标都可以评价应用系统的处理能力。一般的建议与系统交易日志保持一致，以便于统计业务量或者交易量。系统处理能力指标是技术测试活动中重要指标。</p>
 <p>一般情况下，用以下几个指标来度量：</p>
 <ul>
 <li>
 <p>HPS（Hits Per Second）：点击率。每秒点击次数，单位是<code class="language-vim">次/秒</code></p>
 <p>HPS 主要指每秒客户端向 Web 服务器提交的 HTTP 请求数。客户端每发送一个请求，服务器就处理一次，所以点击数是 Web 应用处理交易的最小单位。HPS 越大，对服务器的压力相对也越大。</p>
-<p>这里需要区别的是，点击不是指日常使用鼠标的“单击”操作，因为在一次“单击”操作中，客户端可能向服务器发起了多个 HTTP 请求。</p>
+<p>这里需要区别的是，点击不是指日常使用鼠标的<code class="language-vim">单击</code>操作，因为在一次<code class="language-vim">单击</code>操作中，客户端可能向服务器发起了多个 HTTP 请求。</p>
 <p>HPS 除受程序处理速度的影响，还受带宽的限制，即每个请求的大小情况。请求越小，每秒完成的请求数越多。在排除带宽影响的情况下，具有缓存机制的系统比没有缓存机制的系统 HPS 要高很多。在网络传输到达一定程度后，HPS 就不会随并发量的增长而增大。</p>
 <p>一般可以在限定的带宽情况下对最大 HPS 进行估算，公式如下：</p>
 <p><code class="language-vim">最大HPS = 带宽 / 8 / 估算平均每个请求大小</code></p>
@@ -167,18 +181,33 @@
 </li>
 </ul>
 <h3 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>1.3. 吞吐量 Throughput</h3>
-<p>吞吐量为<code class="language-vim">单位时间内系统处理的客户请求的数量</code>，直接体现软件系统的性能承载能力。对于交互式应用系统来说，吞吐量反映的是服务器承受的压力；在容量规划的测试中，吞吐量是一个重要指标，它不但反映在中间件、数据库上，更加体现在硬件上。</p>
-<p>从业务角度看，吞吐量可用<code class="language-vim">请求数/秒</code>、<code class="language-vim">页面数/秒</code>、<code class="language-vim">人数/天</code>或<code class="language-vim">处理业务数/小时</code>等单位来衡量；从网络角度看，吞吐量可以用<code class="language-vim">字节/秒</code>来衡量。</p>
+<p>吞吐量为<code class="language-vim">单位时间内系统处理的客户请求的数量</code>，直接体现软件系统的性能承载能力。</p>
+<p>对于交互式应用系统来说，吞吐量反映的是服务器承受的压力；在容量规划的测试中，吞吐量是一个重要指标，它不但反映在中间件、数据库上，更加体现在硬件上。</p>
+<ul>
+<li>从业务角度看，吞吐量可用<code class="language-vim">请求数/秒</code>、<code class="language-vim">页面数/秒</code>、<code class="language-vim">人数/天</code>或<code class="language-vim">处理业务数/小时</code>等单位来衡量；</li>
+<li>从网络角度看，吞吐量可以用<code class="language-vim">字节/秒</code>来衡量。</li>
+</ul>
 <p>对于交互式应用来说，吞吐量反映的是服务器承受的压力，它能够说明系统的负载能力。</p>
-<p>以不同方式表达的吞吐量可以说明不同层次的问题。例如，以<code class="language-vim">字节/秒</code>的方式，可以表示要受网络基础设施、服务器架构、应用服务器制约等方面的瓶颈；以<code class="language-vim">请求数/秒</code>的方式，表示主要是受应用服务器和应用代码的制约体现出的瓶颈。</p>
-<p>经常在网上看到<code class="language-vim">吞吐量</code>与<code class="language-vim">吞吐率</code>的概念，也有不少人把两者混淆。<code class="language-vim">吞吐量</code>是指单位时间内系统处理的请求数量，能直接反映服务器承受的压力，是需要重点关注的指标。而<code class="language-vim">吞吐率</code>一般指用户在给定的一秒内从服务器获得的数据量，简而言之就是服务器返回的数据量。</p>
+<p>以不同方式表达的吞吐量可以说明不同层次的问题。</p>
+<p>例如：</p>
+<ul>
+<li>以<code class="language-vim">字节/秒</code>的方式，可以表示要受网络基础设施、服务器架构、应用服务器制约等方面的瓶颈；</li>
+<li>以<code class="language-vim">请求数/秒</code>的方式，表示主要是受应用服务器和应用代码的制约体现出的瓶颈。</li>
+</ul>
+<p>经常在网上看到<code class="language-vim">吞吐量</code>与<code class="language-vim">吞吐率</code>的概念，也有不少人把两者混淆。</p>
+<ul>
+<li><code class="language-vim">吞吐量</code>是指单位时间内系统处理的请求数量，能直接反映服务器承受的压力，是需要重点关注的指标。</li>
+<li><code class="language-vim">吞吐率</code>一般指用户在给定的一秒内从服务器获得的数据量，简而言之就是服务器返回的数据量。</li>
+</ul>
 <h3 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>1.4. 并发用户数 Virtual User</h3>
 <p>首先来理解一下并发的概念。</p>
 <ol>
 <li>
 <p>并发的两种情况</p>
-<p>一种是严格意义上的并发，即<code class="language-vim">所有的用户在同一时刻做同一件事或操作</code>，这种操作一般指做同一类型的业务。例如，所有用户同一时刻做并发登录，同一时刻做表单提交。</p>
-<p>另一种并发是广义范围的并发，这种并发与前一种并发的区别是，尽管多个用户对系统发出了请求或者进行了操作，但是这些请求或者操作可以是相同的，也可以是不同的。例如，在同一时刻有用户在登录，有用户在提交表单。</p>
+<p>一种是严格意义上的并发，即<code class="language-vim">所有的用户在同一时刻做同一件事或操作</code>，这种操作一般指做同一类型的业务。</p>
+<p>例如，所有用户同一时刻做并发登录，同一时刻做表单提交。</p>
+<p>另一种并发是广义范围的并发，这种并发与前一种并发的区别是，尽管多个用户对系统发出了请求或者进行了操作，但是这些请求或者操作可以是相同的，也可以是不同的。</p>
+<p>例如，在同一时刻有用户在登录，有用户在提交表单。</p>
 </li>
 <li>
 <p>从服务器的角度来看并发</p>
@@ -203,32 +232,44 @@
 <ul>
 <li>
 <p>先了解一个而简单的例子</p>
-<p>TPS 是每秒事务数，但是事务时要靠虚拟用户做出来的，假如 1 个虚拟用户在 1 秒内完成 1 笔事务，那么 TPS 明显就是 1；</p>
-<p>如果某笔业务响应时间是 1ms, 那么 1 个用户在 1 秒内能完成 1000 笔事务，TPS 就是 1000 了；</p>
-<p>如果某笔业务响应时间是 1s, 那么 1 个用户在 1 秒内只能完成 1 笔事务，要想达到 1000TPS，至少需要 1000 个用户；</p>
+<p><code class="language-vim">TPS</code> 是<code class="language-vim">每秒事务数</code>，但是事务时要靠虚拟用户做出来的，假如 <code class="language-vim">1</code> 个虚拟用户在 <code class="language-vim">1</code> 秒内完成 <code class="language-vim">1</code> 笔事务，那么 <code class="language-vim">TPS</code> 明显就是 <code class="language-vim">1</code>；</p>
+<p>如果某笔业务响应时间是 <code class="language-vim">1ms</code>, 那么 <code class="language-vim">1</code> 个用户在 <code class="language-vim">1</code> 秒内能完成 <code class="language-vim">1000</code> 笔事务，<code class="language-vim">TPS</code> 就是 <code class="language-vim">1000</code> 了；</p>
+<p>如果某笔业务响应时间是 <code class="language-vim">1s</code>, 那么 <code class="language-vim">1</code> 个用户在 <code class="language-vim">1</code> 秒内只能完成 <code class="language-vim">1</code> 笔事务，要想达到 <code class="language-vim">1000TPS</code>，至少需要 <code class="language-vim">1000</code> 个用户；</p>
 </li>
 </ul>
-<p>因此可以说 1 个用户可以产生 1000TPS，1000 个用户也可以产生 1000TPS，无非是看响应时间快慢。</p>
-<p>系统的性能由 TPS 决定，跟并发用户数没有多大关系。系统的最大 TPS 是一定的（在一个范围内），但并发用户数不一定，可以调整。</p>
-<p>对于已有系统：可选取高峰时刻，在一定时间内使用系统的人数，这些人数可认为是在线用户数，并发用户数可以取 10%，例如在半个小时内，使用系统的用户数为 10 万，那么取 10%（即 1 万）作为并发用户数基本就够了。</p>
-<p>新系统：没有历史数据作参考，建议通过业务部门进行评估。一般情况下，大型系统（业务量大、机器多）做压力测试，<code class="language-vim">1W ~ 5W</code> 个用户并发，中小型系统做压力测试，<code class="language-vim">5K</code> 个用户并发比较常见。</p>
+<p>因此可以说 <code class="language-vim">1</code> 个用户可以产生 <code class="language-vim">1000TPS</code>，<code class="language-vim">1000</code> 个用户也可以产生 <code class="language-vim">1000TPS</code>，无非是看响应时间快慢。</p>
+<p>系统的性能由 <code class="language-vim">TPS</code> 决定，跟并发用户数没有多大关系。系统的最大 <code class="language-vim">TPS</code> 是一定的（在一个范围内），但并发用户数不一定，可以调整。</p>
+<ul>
+<li>
+<p>对于已有系统</p>
+<p>可选取高峰时刻，在一定时间内使用系统的人数，这些人数可认为是在线用户数，并发用户数可以取 <code class="language-vim">10%</code>。</p>
+<p>例如在半个小时内，使用系统的用户数为 <code class="language-vim">10</code> 万，那么取 <code class="language-vim">10%</code>（即 <code class="language-vim">1</code> 万）作为并发用户数基本就够了。</p>
+</li>
+<li>
+<p>新系统</p>
+<p>没有历史数据作参考，建议通过业务部门进行评估。</p>
+<p>一般情况下，大型系统（业务量大、机器多）做压力测试，<code class="language-vim">1W ~ 5W</code> 个用户并发，中小型系统做压力测试，<code class="language-vim">5K</code> 个用户并发比较常见。</p>
+</li>
+</ul>
 <h3 id="anchor_8"><a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8"><i aria-hidden="true" class="fa fa-link"></i></a>1.6. PV</h3>
-<p>PV 即 page view，页面浏览量。用户每一次对网站中的每个页面访问均被记录 1 次。用户对同一页面的多次刷新，访问量累计。通常是衡量一个网站甚至一条网络新闻的主要指标。</p>
-<p>与 PV 相关的还有 RV，即重复访问者数量（repeat visitors）。</p>
+<p><code class="language-vim">PV</code> 即 page view，页面浏览量。</p>
+<p>用户每一次对网站中的每个页面访问均被记录 1 次。用户对同一页面的多次刷新，访问量累计。通常是衡量一个网站甚至一条网络新闻的主要指标。</p>
+<p>与 <code class="language-vim">PV</code> 相关的还有 <code class="language-vim">RV</code>，即<code class="language-vim">重复访问者数量</code>（repeat visitors）。</p>
 <h3 id="anchor_9"><a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9"><i aria-hidden="true" class="fa fa-link"></i></a>1.7. UV</h3>
-<p>UV 访问数（Unique Visitor）指独立访客访问数，统计 1 天内访问某站点的用户数（以 cookie 为依据），一台电脑终端为一个访客。</p>
+<p><code class="language-vim">UV</code> 访问数（Unique Visitor）指<code class="language-vim">独立访客访问数</code>，统计 1 天内访问某站点的用户数（以 cookie 为依据），一台电脑终端为一个访客。</p>
 <p>可以理解成访问某网站的电脑的数量。网站判断来访电脑的身份是通过来访电脑的 cookies 实现的。如果更换了 IP 后但不清除 cookies，再访问相同网站，该网站的统计中 UV 数是不变的。如果用户不保存 cookies 访问、清除了 cookies 或者更换设备访问，计数会加 1。一天内相同的客户端多次访问只计为 1 个访客。</p>
 <h2 id="anchor_10"><a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10"><i aria-hidden="true" class="fa fa-link"></i></a>2. 资源指标</h2>
 <p>资源指标与硬件资源消耗直接相关，也就是所谓的<code class="language-vim">资源利用率</code>。测试的目的不同，需要统计的系统资源指标也不同，主要包括服务器操作系统资源使用情况、资源消耗情况等。</p>
 <h3 id="anchor_11"><a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11"><i aria-hidden="true" class="fa fa-link"></i></a>2.1. 处理器</h3>
 <ol>
 <li>
-<p>CPU 占用率（CPU Utilization）</p>
+<p><code class="language-vim">CPU 占用率</code>：<code class="language-vim">CPU Utilization</code> Linux</p>
+<p><code class="language-vim">CPU 利用率</code> : <code class="language-vim">Processor/Processor Time</code></p>
 <p>如果该值持续超过 <code class="language-vim">95%</code>，则表明瓶颈是 CPU。可以考虑增加一个处理器或更换一个更快的处理器。一般可接受的最大上限是 <code class="language-vim">80%~85%</code>，合理使用的范围在 <code class="language-vim">60%~70%</code> 以下。</p>
 </li>
 <li>
-<p>System/Processor Queue Length</p>
-<p>如果 System/Processor Queue Length 大于 2，而处理器利用率（Processor Time）一直很低，则存在着处理器阻塞。</p>
+<p><code class="language-vim">处理器队列长度</code>：<code class="language-vim">System/Processor Queue Length</code></p>
+<p>如果 <code class="language-vim">System/Processor Queue Length</code> 大于 2，而<code class="language-vim">处理器利用率</code>（Processor Time）一直很低，则存在着处理器阻塞。</p>
 <p>CPU 资源成为系统性能瓶颈的征兆：</p>
 <ul>
 <li>很慢的响应时间（slow response time）。</li>
@@ -242,12 +283,13 @@
 <h3 id="anchor_12"><a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12"><i aria-hidden="true" class="fa fa-link"></i></a>2.2. 内存 RAM Memory</h3>
 <ol>
 <li>
-<p>Paging Rate：内存页交换速率</p>
-<p>如果该值偶尔走高，则表明当时有线程竞争内存。如果该值持续很高，则内存可能是瓶颈，也可能是内存访问命中率低。</p>
+<p><code class="language-vim">内存页交换速率</code>：<code class="language-vim">Paging Rate</code> Linux</p>
+<p>如果该值偶尔走高，则表明当时有线程竞争内存。</p>
+<p>如果该值持续很高，则内存可能是瓶颈，也可能是内存访问命中率低。</p>
 </li>
 <li>
-<p>Memory/Available Bytes</p>
-<p>Memory/Available Bytes 计数器的值持续降低，同时 Process/Private Bytes 计数器和 Process/Working Set 计数器的值在长时间内持续升高，则很可能存在内存泄漏。需要更详细的内存监控工具来定位是否有内存泄漏和存在内存泄漏的代码。</p>
+<p><code class="language-vim">可用字节数</code>：<code class="language-vim">Memory/Available Bytes</code></p>
+<p><code class="language-vim">Memory/Available Bytes</code> 计数器的值持续降低，同时 <code class="language-vim">Process/Private Bytes</code> 计数器和 <code class="language-vim">Process/Working Set</code> 计数器的值在长时间内持续升高，则很可能存在内存泄漏。需要更详细的内存监控工具来定位是否有内存泄漏和存在内存泄漏的代码。</p>
 <p>内存资源成为系统性能瓶颈的征兆：</p>
 <ul>
 <li>很高的换页率（high pageout rate）。</li>
@@ -261,12 +303,12 @@
 <h3 id="anchor_13"><a class="anchor-navigation-ex-anchor" href="#anchor_13" name="anchor_13"><i aria-hidden="true" class="fa fa-link"></i></a>2.3. 磁盘 I/O</h3>
 <ol>
 <li>
-<p>Disk Rate：磁盘交换率</p>
+<p><code class="language-vim">Disk Rate</code>：<code class="language-vim">磁盘交换率</code> Linux</p>
 <p>如果该参数值一直很高，则表明 I/O 有问题。可考虑更换更快的硬盘系统。</p>
 </li>
 <li>
-<p>Disk Time 和 Avg.Disk Queue Length</p>
-<p>当这两个值很高，而 Page Reads/sec（页面读取操作速率）很低时，则可能存在磁盘瓶颈。</p>
+<p><code class="language-vim">LogicalDisk/Disk Time</code> 和 <code class="language-vim">LogicalDisk/Avg.Disk Queue Length</code></p>
+<p>当这两个值很高，而 <code class="language-vim">Page Reads/sec</code>（页面读取操作速率）很低时，则可能存在磁盘瓶颈。</p>
 <p>I/O 资源成为系统性能瓶颈的征兆：</p>
 <ol>
 <li>过高的磁盘利用率（high disk utilization）。</li>
@@ -279,8 +321,9 @@
 </li>
 </ol>
 <h3 id="anchor_14"><a class="anchor-navigation-ex-anchor" href="#anchor_14" name="anchor_14"><i aria-hidden="true" class="fa fa-link"></i></a>2.4. 带宽</h3>
-<p>一般使用计数器 Bytes Total/sec 来度量。Bytes Total/sec 表示为发送和接收字节的速率，包括帧字符在内。判断网络连接速度是否是瓶颈，可以用该计数器的值和目前网络的带宽进行比较。</p>
-<p>判断网络带宽是否是系统运行性能瓶颈的首要条件是，网络带宽是否会影响系统交易执行性能。例如，减小网络带宽，并发用户数、响应时间与事务通过率等性能指标是否不能接受；增加网络带宽，并发用户数、响应时间与事务通过率等性能指标会得到明显提高。</p>
+<p>一般使用计数器 <code class="language-vim">Bytes Total/sec</code> 来度量。<code class="language-vim">Bytes Total/sec</code> 表示为发送和接收字节的速率，包括帧字符在内。判断网络连接速度是否是瓶颈，可以用该计数器的值和目前网络的带宽进行比较。</p>
+<p>判断网络带宽是否是系统运行性能瓶颈的首要条件是，网络带宽是否会影响系统交易执行性能。</p>
+<p>例如，减小网络带宽，并发用户数、响应时间与事务通过率等性能指标是否不能接受；增加网络带宽，并发用户数、响应时间与事务通过率等性能指标会得到明显提高。</p>
 <p>在实际性能测试中，如果发现始终报连接超时，而实际手工访问可以正常访问，可以通过 ping 应用服务器 IP 或网关 IP，如果出现网络严重延迟或丢包，则说明网络不稳定，需要检查网络。</p>
 <h2 id="anchor_15"><a class="anchor-navigation-ex-anchor" href="#anchor_15" name="anchor_15"><i aria-hidden="true" class="fa fa-link"></i></a>3. 其他术语</h2>
 <h3 id="anchor_16"><a class="anchor-navigation-ex-anchor" href="#anchor_16" name="anchor_16"><i aria-hidden="true" class="fa fa-link"></i></a>3.1. 思考时间</h3>
@@ -290,10 +333,10 @@
 <p>思考时间就是用户进行操作时，每个请求或者操作之间的间隔时间，是为了更加真实地模拟用户的操作场景。因为在实际使用中不太可能会出现不断地发送请求，一般都是一个请求后，等待一段时间，然后发送下一个请求，恶意攻击除外。</p>
 </li>
 <li>
-<p>论坛连续发帖时会提示<code class="language-vim">两次发帖时间间隔不能小于 15 秒钟</code>，这时如果要满足业务的特定需求就需要加上思考时间 15s 了。</p>
+<p>论坛连续发帖时会提示<code class="language-vim">两次发帖时间间隔不能小于 15 秒钟</code>，这时如果要满足业务的特定需求就需要加上思考时间 <code class="language-vim">15s</code> 了。</p>
 </li>
 </ol>
-<p>如果想了解系统的最大承受能力或者极端情况下系统的性能表现，则可以设置为 0 思考时间。但如果是预估系统的性能，就应该最大可能地模拟真实思考时间。一般都会加上思考时间，只是在分析时要去掉思考时间。</p>
+<p>如果想了解系统的最大承受能力或者极端情况下系统的性能表现，则可以设置为 <code class="language-vim">0</code> 思考时间。但如果是预估系统的性能，就应该最大可能地模拟真实思考时间。一般都会加上思考时间，只是在分析时要去掉思考时间。</p>
 <h3 id="anchor_17"><a class="anchor-navigation-ex-anchor" href="#anchor_17" name="anchor_17"><i aria-hidden="true" class="fa fa-link"></i></a>3.2. 集合点</h3>
 <p>一般应用于考察单一事务处理能力时应用，比如抢购前，需要等待用户全部登录完毕，就可以插入一个集合点指示所有用户在登录完毕后，等待一起点击抢购按钮。</p>
 
