@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>性能测试相关 - LoadRunner</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="简介.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li>
+<ul class="articles"><li class="chapter" data-level="1.1" data-path="../../index.html"><a href="../../index.html"><b>1.1.</b>介绍</a></li></ul>
+<li class="header">理论基础</li>
+<ul class="articles"><li class="chapter" data-level="2.1" data-path="../performance/index.html"><a href="../performance/index.html"><b>2.1.</b>性能理论</a>
+<ul class="articles"><li class="chapter" data-level="2.1.1" data-path="../performance/性能测试概论.html"><a href="../performance/性能测试概论.html"><b>2.1.1.</b>性能测试概论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="../performance/性能测试类型.html"><a href="../performance/性能测试类型.html"><b>2.1.2.</b>性能测试类型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="../performance/软件性能的基本指标.html"><a href="../performance/软件性能的基本指标.html"><b>2.1.3.</b>软件性能的基本指标</a></li>
+<li class="chapter" data-level="2.1.4" data-path="../performance/软件性能测试方法论.html"><a href="../performance/软件性能测试方法论.html"><b>2.1.4.</b>软件性能测试方法论</a></li>
+<li class="chapter" data-level="2.1.5" data-path="../performance/软件性能测试的目标.html"><a href="../performance/软件性能测试的目标.html"><b>2.1.5.</b>软件性能测试的目标</a></li>
+<li class="chapter" data-level="2.1.6" data-path="../performance/性能测试工具.html"><a href="../performance/性能测试工具.html"><b>2.1.6.</b>性能测试工具</a></li></ul></li>
+<li class="chapter active" data-level="2.2" data-path="index.html"><a href="index.html"><b>2.2.</b>LoadRunner</a>
+<ul class="articles"><li class="chapter" data-level="2.2.1" data-path="简介.html"><a href="简介.html"><b>2.2.1.</b>LoadRunner 简介</a></li>
+<li class="chapter" data-level="2.2.2" data-path="hwt.html"><a href="hwt.html"><b>2.2.2.</b>HP Web Tours</a></li></ul></li></ul>
+<li class="header">实操</li>
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../..">LoadRunner</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>Load Runner</a></li></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>Load Runner</h1>
+<p>LoadRunner 引入国内以来迅速为测试工程师接受，成为性能测试的主流工具，下面我们将对 LoadRunner 工具的使用展开详细讲解。</p>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: 性能测试工具" class="navigation navigation-prev" href="../performance/性能测试工具.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: LoadRunner 简介" class="navigation navigation-next" href="简介.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn",
+                "previous_page_link": "../performance/性能测试工具.html",
+                "next_page_link": "简介.html"
+            },
+            "basePath": "../..",
+            "js": {}
+        });
+    });
+</script>
+</div>
+
+<script src="../../../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>

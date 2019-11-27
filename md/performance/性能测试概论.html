@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>性能测试相关 - 性能测试概论</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description">
+<meta content="刘士" name="author">
+
+<link href="../../../asserts/lsbook/less/website.css" rel="stylesheet">
+<link href="../../../asserts/lsbook/katex/katex.min.css" rel="stylesheet">
+<link href="../../../asserts/lsbook/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link href="../../../asserts/lsbook/images/apple-touch-icon-precomposed-152.png"
+      rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="../../../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!--分页-->
+<link href="性能测试类型.html" rel="next"/>
+</head>
+<body>
+<div class="book"><div class="book-summary">
+    <div id="book-search-input" role="search">
+        <input placeholder="输入并搜索" type="text"/>
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            <li class="header">Summary</li>
+<ul class="articles"><li class="chapter" data-level="1.1" data-path="../../index.html"><a href="../../index.html"><b>1.1.</b>介绍</a></li></ul>
+<li class="header">理论基础</li>
+<ul class="articles"><li class="chapter" data-level="2.1" data-path="index.html"><a href="index.html"><b>2.1.</b>性能理论</a>
+<ul class="articles"><li class="chapter active" data-level="2.1.1" data-path="性能测试概论.html"><a href="性能测试概论.html"><b>2.1.1.</b>性能测试概论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="性能测试类型.html"><a href="性能测试类型.html"><b>2.1.2.</b>性能测试类型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="软件性能的基本指标.html"><a href="软件性能的基本指标.html"><b>2.1.3.</b>软件性能的基本指标</a></li>
+<li class="chapter" data-level="2.1.4" data-path="软件性能测试方法论.html"><a href="软件性能测试方法论.html"><b>2.1.4.</b>软件性能测试方法论</a></li>
+<li class="chapter" data-level="2.1.5" data-path="软件性能测试的目标.html"><a href="软件性能测试的目标.html"><b>2.1.5.</b>软件性能测试的目标</a></li>
+<li class="chapter" data-level="2.1.6" data-path="性能测试工具.html"><a href="性能测试工具.html"><b>2.1.6.</b>性能测试工具</a></li></ul></li>
+<li class="chapter" data-level="2.2" data-path="../LR/index.html"><a href="../LR/index.html"><b>2.2.</b>LoadRunner</a>
+<ul class="articles"><li class="chapter" data-level="2.2.1" data-path="../LR/简介.html"><a href="../LR/简介.html"><b>2.2.1.</b>LoadRunner 简介</a></li>
+<li class="chapter" data-level="2.2.2" data-path="../LR/hwt.html"><a href="../LR/hwt.html"><b>2.2.2.</b>HP Web Tours</a></li></ul></li></ul>
+<li class="header">实操</li>
+            <li class="divider"></li>
+            <li>
+                <a class="lsbook-link" href="https://github.com/liushilive/lsbook" target="blank">
+                    本书使用 LsBook 发布
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="book-body">
+    <div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            <a href="../..">性能测试概论</a>
+        </h1>
+    </div>
+
+    <div class="page-wrapper" role="main" tabindex="-1">
+        <div class="page-inner">
+            <div class="search-plus" id="book-search-results">
+                <div class="search-noresults">
+                    <section class="normal markdown-section">
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>性能测试概论</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>什么是性能测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>2. </b>性能测试的必要性</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>性能测试概论</h1>
+<p>随着互联网技术的迅速发展、软件系统的日益复杂，性能已经成为软件质量重要的衡量标准之一。</p>
+<p>中国银联业务也曾经因性能问题中断 6 小时，数百万笔跨行交易无法进行，损失超过 10 亿元。由性能所导致的问题影响越来越广泛，因此企业对于软件产品的性能要求越来越高，也越来越关注。</p>
+<p>一个好的建筑师首先需要清楚了解各建筑材料的特性，同样，一个好的性能测试工程师也需要对性能的基础知识有全面的了解。下面就让我们一起来学习性能测试的基础知识。</p>
+<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 什么是性能测试</h2>
+<ol>
+<li>
+<p>性能（Performance）</p>
+<p>计算机系统或子系统实现其功能的能力。</p>
+<p>对计算机系统或子系统执行其功能的能力的度量。</p>
+<p>例如，响应时间、吞吐能力、事务处理数。</p>
+</li>
+<li>
+<p>用户角度</p>
+<p>用户关注的性能，主要为主观用户体验。一方面是用户查询、提交等业务操作的响应速度，从用户发起请求到服务器返回结果的时间。另一方面是页面展示、页面解析、渲染的速度，包含了用户计算机和网站服务器的通信时间、网站服务器的处理时间、用户计算机浏览器构造请求解析响应数据的时间。</p>
+</li>
+<li>
+<p>开发人员角度</p>
+<p>从架构层面看，关注应用层、服务层、数据层的性能。</p>
+<p>从系统功能层面看，关注各个模块、模块之间、接口之间的性能。</p>
+<p>在浏览器端：浏览器缓存、页面压缩（计算机的能力）、合理布局页面、减少 Cookie 传输、使用 CDN 在网络供应商处缓存。</p>
+<p>在应用服务器端：服务器本地缓存、分布式缓存、异步消息队列、集群（应用服务器集群、缓存服务器集群、数据服务器缓存）。</p>
+<p>在数据库服务器端：索引、缓存、SQL 优化、NoSQL。</p>
+<p>在代码层面：多线程、改善内存管理。</p>
+<p>具体体现：包括响应延迟、系统吞吐量、并发处理能力、资源消耗、系统稳定性。</p>
+</li>
+<li>
+<p>性能测试</p>
+<p>性能测试是通过自动化的测试工具模拟多种正常、峰值及异常负载条件来对系统的<code class="language-vim">各项性能指标</code>进行测试。它的覆盖面非常广泛，对于一个软件系统而言包括了执行效率、资源占用、稳定性、安全性、兼容性、可扩展性、可靠性等。性能测试用来保证产品发布后，系统的性能满足用户的需求。性能测试在软件质量保证过程中起到重要的作用。</p>
+<p>通俗地讲，通过模拟生产运行的业务压力和使用场景组合，测试系统的性能是否满足生成性能要求。即在特定的运行条件下验证系统的能力状况。</p>
+</li>
+</ol>
+<h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. 性能测试的必要性</h2>
+<p>随着社会的发展，用户对产品的要求也越来越高，以前可能看重功能方面，现在正在逐步转变为性能方面，同时各大公司也加强了产品的性能测试，因为从这几年发生的事件来看，性能带来的严重问题以及损失不容忽视，而性能测试的重要性也不言而喻。</p>
+<ul>
+<li>
+<p>案例 1</p>
+<p>2008 年的奥运会票务系统，由于庞大的订票人数超出预期，奥运票务系统<code class="language-vim">开工</code>后不久便陷入<code class="language-vim">瘫痪</code>状态，当时对外公布的是奥运票务系统每小时能处理 15 万张门票的销售，以及承担每小时 100 万次以上的网上浏览量，但 10 月 30 日系统死机前每小时的网上浏览量达到 800 万，1 小时售出的票也达到了 20 万张。由于预估工作的缺陷，导致很多人无法通过网络订到自己想要的票。</p>
+</li>
+<li>
+<p>案例 2</p>
+<p>魔兽世界在中国的代理商由九城变更为网易，与九城服务器经常死机不无关系，但是换作网易后，服务器也经常死机。2010 年 10 月 11 日，魔兽世界服务器故障时，官网论坛上的游戏玩家纷纷发<code class="language-vim">贺词</code>表示不满，从这可以看出网易公司对魔兽世界的性能预估存在不足。也正是因为对性能严重忽视间接导致了九城在失去魔兽世界之后，从一家土豪公司成了一家几乎被人遗忘的公司。</p>
+</li>
+<li>
+<p>案例 4</p>
+<p>2010 年，中国最大的微博平台新浪微博死机 4 小时，新浪官方解释说：之所以掉线几小时，是因为用户增长超出预期，服务器备感压力。自上午 10 点起，用户无法登录，新浪的报错页面几次更改，最初的<code class="language-vim">微博正在升级，将于 11:30 恢复</code>，然后改为<code class="language-vim">12:00 恢复</code>，过了一段时间，干脆改为<code class="language-vim">稍后恢复</code>，然而，估计是看不到恢复希望，提示信息又改为<code class="language-vim">微博系统压力过大正在抢修，我们深表歉意</code>。悲剧的是<code class="language-vim">歉意</code>竟然写成了<code class="language-vim">谦意</code>。</p>
+</li>
+</ul>
+
+                        <footer class="page-footer"><span class="copyright">© 2019 刘士. 
+All rights reserved.</span><span class="footer-modification">
+<span id="busuanzi_container_site_uv" style="display:none">本站访客数 <span id="busuanzi_value_site_uv">
+</span> 人次</span></span></footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+
+</script>
+                    </section>
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> 结果匹配 "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">没有匹配的结果 "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a aria-label="Previous page: 性能理论" class="navigation navigation-prev" href="index.html">
+    <i class="fa fa-angle-left"></i>
+</a>
+
+
+<a aria-label="Next page: 性能测试类型" class="navigation navigation-next" href="性能测试类型.html">
+    <i class="fa fa-angle-right"></i>
+</a>
+
+
+</div>
+<script>
+    var lsbook = lsbook || [];
+    lsbook.push(function () {
+        lsbook.page.hasChanged({
+            "config": {
+                "github_url":"https://liushilive.github.io/",
+                "language": "zh-cn",
+                "previous_page_link": "index.html",
+                "next_page_link": "性能测试类型.html"
+            },
+            "basePath": "../..",
+            "js": {'prism': ['../../../asserts/lsbook/prismjs/clipboard.min.js', '../../../asserts/lsbook/prismjs/prism.js']}
+        });
+    });
+</script>
+</div>
+
+<script src="../../../asserts/lsbook/jquery-3.3.1.min.js"></script>
+<script charset="UTF-8" src="../../../asserts/lsbook/jquery_mar/jquery.mark.js"></script>
+<script src="../../../asserts/lsbook/lightbox/js/lightbox.min.js"></script>
+<script src="../../../asserts/lsbook/lsbook.min.js"></script>
+
+</body>
+</html>

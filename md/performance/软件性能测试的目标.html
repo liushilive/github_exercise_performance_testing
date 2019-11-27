@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>性能测试相关 - 性能测试工具</title>
+<title>性能测试相关 - 软件性能测试的目标</title>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="" name="description">
 <meta content="刘士" name="author">
@@ -20,7 +20,7 @@
       rel="apple-touch-icon-precomposed" sizes="152x152">
 <link href="../../../asserts/lsbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <!--分页-->
-<link href="../LR/index.html" rel="next"/>
+<link href="性能测试工具.html" rel="next"/>
 </head>
 <body>
 <div class="book"><div class="book-summary">
@@ -37,8 +37,8 @@
 <li class="chapter" data-level="2.1.2" data-path="性能测试类型.html"><a href="性能测试类型.html"><b>2.1.2.</b>性能测试类型</a></li>
 <li class="chapter" data-level="2.1.3" data-path="软件性能的基本指标.html"><a href="软件性能的基本指标.html"><b>2.1.3.</b>软件性能的基本指标</a></li>
 <li class="chapter" data-level="2.1.4" data-path="软件性能测试方法论.html"><a href="软件性能测试方法论.html"><b>2.1.4.</b>软件性能测试方法论</a></li>
-<li class="chapter" data-level="2.1.5" data-path="软件性能测试的目标.html"><a href="软件性能测试的目标.html"><b>2.1.5.</b>软件性能测试的目标</a></li>
-<li class="chapter active" data-level="2.1.6" data-path="性能测试工具.html"><a href="性能测试工具.html"><b>2.1.6.</b>性能测试工具</a></li></ul></li>
+<li class="chapter active" data-level="2.1.5" data-path="软件性能测试的目标.html"><a href="软件性能测试的目标.html"><b>2.1.5.</b>软件性能测试的目标</a></li>
+<li class="chapter" data-level="2.1.6" data-path="性能测试工具.html"><a href="性能测试工具.html"><b>2.1.6.</b>性能测试工具</a></li></ul></li>
 <li class="chapter" data-level="2.2" data-path="../LR/index.html"><a href="../LR/index.html"><b>2.2.</b>LoadRunner</a>
 <ul class="articles"><li class="chapter" data-level="2.2.1" data-path="../LR/简介.html"><a href="../LR/简介.html"><b>2.2.1.</b>LoadRunner 简介</a></li>
 <li class="chapter" data-level="2.2.2" data-path="../LR/hwt.html"><a href="../LR/hwt.html"><b>2.2.2.</b>HP Web Tours</a></li></ul></li></ul>
@@ -59,7 +59,7 @@
         <!-- Title -->
         <h1>
             <i class="fa fa-circle-o-notch fa-spin"></i>
-            <a href="../..">性能测试工具</a>
+            <a href="../..">软件性能测试的目标</a>
         </h1>
     </div>
 
@@ -68,66 +68,32 @@
             <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                     <section class="normal markdown-section">
-                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>性能测试工具</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>LoadRunner VS JMeter</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
-                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>性能测试工具</h1>
-<p>日行千里需有千里马，要想做好性能测试也需要一款好的工具来支持。软件性能测试工具分为三类：商业收费工具、开源免费工具、自主开发工具。</p>
-<ul>
-<li>商业收费工具有 <code class="language-vim">QA Load</code>、<code class="language-vim">SilkPerformer</code>、<code class="language-vim">LoadRunner</code>、<code class="language-vim">WebRunner</code>、<code class="language-vim">IBM Rational Performance Tester</code> 等。</li>
-<li>开源免费工具有 <code class="language-vim">Apache JMeter</code>、<code class="language-vim">AutoBench</code>、<code class="language-vim">ApacheBench</code>、<code class="language-vim">Pylot</code> 等。</li>
-<li>自主开发工具成本高，稳定性与可靠性也容易存在问题。</li>
-</ul>
-<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. LoadRunner VS JMeter</h2>
-<table>
-<thead>
-<tr>
-<th align="left">比较参数</th>
-<th align="left">LoadRunner</th>
-<th align="left">JMeter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">协议</td>
-<td align="left">Load Runner 支持所有协议</td>
-<td align="left">主要用于 Web 和 Web 服务应用程序相关协议</td>
-</tr>
-<tr>
-<td align="left">可用性</td>
-<td align="left">LoadRunner 是一种昂贵的软件测试工具。它最近发布了免费试用版，但不能简单地下载使用。</td>
-<td align="left">Apache JMeter 是一个开源的免费软件测试工具，可以轻松下载该工具以执行任何测试。</td>
-</tr>
-<tr>
-<td align="left">负荷产生能力</td>
-<td align="left">LoadRunner 的负载生成能力有限。</td>
-<td align="left">JMeter 具有无限的负载生成能力。</td>
-</tr>
-<tr>
-<td align="left">执行</td>
-<td align="left">与 JMeter 相比，执行非常复杂。它为每个用户创建一个线程。</td>
-<td align="left">在 JMeter 中执行起来更容易。只需要安装 Java，下载 JMeter 并上传 JMeter 脚本文件。</td>
-</tr>
-<tr>
-<td align="left">报告分析</td>
-<td align="left">由 HP Analysis 解析以生成各种专业图形报告。</td>
-<td align="left">对于经验不足的工程师来说，结果很容易理解，报告需要更专业的测试人员进行深入分析输出。</td>
-</tr>
-<tr>
-<td align="left">脚本编写</td>
-<td align="left">LoadRunner 需要脚本知识。</td>
-<td align="left">可以运行完整的负载测试，而无需了解 JMeter 中的一些代码。</td>
-</tr>
-<tr>
-<td align="left">建立测试场景</td>
-<td align="left">LoadRunner 更复杂，因为它需要管理不同的代理。</td>
-<td align="left">JMeter 不需要添加开始或结束事务元素。</td>
-</tr>
-<tr>
-<td align="left">开源和社区支持</td>
-<td align="left">由一家大型公司所有，限制了用户数量。</td>
-<td align="left">拥有活跃的社区，并为遇到问题的用户提供支持。</td>
-</tr>
-</tbody>
-</table>
+                        <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>软件性能测试的目标</a></li></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
+                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>软件性能测试的目标</h1>
+<p>软件性能测试的目标是验证软件系统是否能够达到用户提出的性能指标，同时发现软件系统中存在的性能瓶颈，优化软件，最终起到优化系统的目的。</p>
+<p>软件性能测试包括以下几个方面的内容。</p>
+<ol>
+<li>
+<p>评估系统的能力</p>
+<p>测试中得到的负荷和响应时间数据可以被用于验证所计划的模型的能力，并帮助作出决策。</p>
+</li>
+<li>
+<p>识别体系中的弱点</p>
+<p>受控的负荷可以被增加到一个极端的水平，并突破它，从而修复体系的瓶颈或薄弱的地方。</p>
+</li>
+<li>
+<p>系统调优</p>
+<p>重复运行测试，验证调整系统的活动得到了预期的结果，从而改进性能。</p>
+</li>
+<li>
+<p>检测软件中的问题</p>
+<p>长时间的测试执行可能导致程序发生由于内存泄漏引起的失败，揭示程序中隐含的问题或冲突。</p>
+</li>
+<li>
+<p>验证稳定性（Resilience）、可靠性（Reliability）</p>
+<p>在一个生产负荷下执行测试一定的时间是评估系统稳定性和可靠性是否满足要求的唯一方法。</p>
+</li>
+</ol>
 
                         <footer class="page-footer"><span class="copyright">© 2019 刘士. 
 All rights reserved.</span><span class="footer-modification">
@@ -154,12 +120,12 @@ All rights reserved.</span><span class="footer-modification">
 </div>
 
 
-<a aria-label="Previous page: 软件性能测试的目标" class="navigation navigation-prev" href="软件性能测试的目标.html">
+<a aria-label="Previous page: 软件性能测试方法论" class="navigation navigation-prev" href="软件性能测试方法论.html">
     <i class="fa fa-angle-left"></i>
 </a>
 
 
-<a aria-label="Next page: LoadRunner" class="navigation navigation-next" href="../LR/index.html">
+<a aria-label="Next page: 性能测试工具" class="navigation navigation-next" href="性能测试工具.html">
     <i class="fa fa-angle-right"></i>
 </a>
 
@@ -172,11 +138,11 @@ All rights reserved.</span><span class="footer-modification">
             "config": {
                 "github_url":"https://liushilive.github.io/",
                 "language": "zh-cn",
-                "previous_page_link": "软件性能测试的目标.html",
-                "next_page_link": "../LR/index.html"
+                "previous_page_link": "软件性能测试方法论.html",
+                "next_page_link": "性能测试工具.html"
             },
             "basePath": "../..",
-            "js": {'prism': ['../../../asserts/lsbook/prismjs/clipboard.min.js', '../../../asserts/lsbook/prismjs/prism.js']}
+            "js": {}
         });
     });
 </script>
