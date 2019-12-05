@@ -83,7 +83,9 @@
 </li>
 <li>
 <p>用户角度</p>
-<p>用户关注的性能，主要为主观用户体验。一方面是用户查询、提交等业务操作的响应速度，从用户发起请求到服务器返回结果的时间。另一方面是页面展示、页面解析、渲染的速度，包含了用户计算机和网站服务器的通信时间、网站服务器的处理时间、用户计算机浏览器构造请求解析响应数据的时间。</p>
+<p>用户关注的性能，主要为主观用户体验。</p>
+<p>一方面是用户查询、提交等业务操作的响应速度，从用户发起请求到服务器返回结果的时间。</p>
+<p>另一方面是页面展示、页面解析、渲染的速度，包含了用户计算机和网站服务器的通信时间、网站服务器的处理时间、用户计算机浏览器构造请求解析响应数据的时间。</p>
 </li>
 <li>
 <p>开发人员角度</p>
@@ -97,8 +99,10 @@
 </li>
 <li>
 <p>性能测试</p>
-<p>性能测试是通过自动化的测试工具模拟多种正常、峰值及异常负载条件来对系统的<code class="language-vim">各项性能指标</code>进行测试。它的覆盖面非常广泛，对于一个软件系统而言包括了执行效率、资源占用、稳定性、安全性、兼容性、可扩展性、可靠性等。性能测试用来保证产品发布后，系统的性能满足用户的需求。性能测试在软件质量保证过程中起到重要的作用。</p>
-<p>通俗地讲，通过模拟生产运行的业务压力和使用场景组合，测试系统的性能是否满足生成性能要求。即在特定的运行条件下验证系统的能力状况。</p>
+<p>性能测试是通过自动化的测试工具模拟多种正常、峰值及异常负载条件来对系统的<code class="language-vim">各项性能指标</code>进行测试。</p>
+<p>它的覆盖面非常广泛，对于一个软件系统而言包括了执行效率、资源占用、稳定性、安全性、兼容性、可扩展性、可靠性等。</p>
+<p>性能测试用来保证产品发布后，系统的性能满足用户的需求。性能测试在软件质量保证过程中起到重要的作用。</p>
+<p>通俗地讲，通过模拟<code class="language-vim">生产运行</code>的业务压力和使用场景组合，测试系统的性能是否满足生产性能要求。即在特定的运行条件下验证系统的能力状况。</p>
 </li>
 </ol>
 <h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. 性能测试的必要性</h2>
@@ -124,7 +128,18 @@ All rights reserved.</span><span class="footer-modification">
 </span> 人次</span></span></footer>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
-
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
 </script>
                     </section>
                 </div>

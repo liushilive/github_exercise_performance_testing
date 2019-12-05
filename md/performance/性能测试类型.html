@@ -87,8 +87,10 @@
 <p>强度测试检查程序对<code class="language-vim">异常</code>的处理能力。压力测试注重的是外界不断施压，而强度测试注重的是系统的极限或者系统异常情况下的测试。</p>
 <p>强度测试是一种特别重要的测试，对系统的稳定性，以及系统未来的扩展空间均具有重要的意义。在这种异常条件下进行的测试，更容易发现系统是否稳定及性能是否容易扩展。</p>
 <h2 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>4. 容量测试</h2>
-<p>容量测试是负载测试的补充，用来确定程序的最终临界点。容量测试用于测试系统能够处理的最大会话能力，确定系统可处理同时在线的最大用户数。即使系统处理会话超过了临界点，系统仍需要稳定运行。</p>
-<p>容量测试的目的是通过测试预先分析出反映软件系统应用特征的某项指标的极限值（如最大并发用户数、数据库记录数等），系统在其极限状态下没有出现任何软件故障或仍能保持主要功能正常运行。容量测试还将确定测试对象在给定时间内能够持续处理的最大负载或工作量。软件容量测试能让软件开发商或用户了解该软件系统的承载能力或提供服务的能力，如某个电子商务网站所能承受的、同时进行交易或结算的在线用户数。知道了系统的实际容量，如果不能满足设计要求，就应该寻求新的技术解决方案，以提高系统的容量。有了对软件负载的准确预测，不仅能对软件系统在实际使用中的性能状况充满信心，同时也可以帮助用户经济地规划应用系统，优化系统的部署。</p>
+<p>容量测试是负载测试的补充，用来确定程序的<code class="language-vim">最终临界点</code>。容量测试用于测试系统能够处理的最大会话能力，确定系统可处理同时在线的最大用户数。即使系统处理会话超过了临界点，系统仍需要稳定运行。</p>
+<p>容量测试的目的是通过测试预先分析出反映软件系统应用特征的某项指标的极限值（如最大并发用户数、数据库记录数等），系统在其极限状态下没有出现任何软件故障或仍能保持主要功能正常运行。</p>
+<p>容量测试还将确定测试对象在给定时间内能够持续处理的最大负载或工作量。</p>
+<p>软件容量测试能让软件开发商或用户了解该软件系统的承载能力或提供服务的能力，如某个电子商务网站所能承受的、同时进行交易或结算的在线用户数。知道了系统的实际容量，如果不能满足设计要求，就应该寻求新的技术解决方案，以提高系统的容量。有了对软件负载的准确预测，不仅能对软件系统在实际使用中的性能状况充满信心，同时也可以帮助用户经济地规划应用系统，优化系统的部署。</p>
 <h2 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>5. 大数据量测试</h2>
 <p>大数据量测试可以分为三种类型：</p>
 <ul>
@@ -130,7 +132,18 @@ All rights reserved.</span><span class="footer-modification">
 </span> 人次</span></span></footer>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
-
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
 </script>
                     </section>
                 </div>

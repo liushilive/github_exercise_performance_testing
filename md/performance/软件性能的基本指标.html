@@ -165,7 +165,7 @@
 </li>
 <li>
 <p>TPS（Transaction per Second）：系统每秒处理交易数，单位是<code class="language-vim">笔/秒</code></p>
-<p><code class="language-vim">TPS= 脚本运行期间所有事务总数 / 脚本运行时长</code></p>
+<p><code class="language-vim">TPS = 脚本运行期间所有事务总数 / 脚本运行时长</code></p>
 <p>TPS 反映了系统在同一时间内能够处理业务的最大能力。TPS 会受到负载的影响，也会随着负载的增加而逐渐增加。当系统进入繁忙期后，TPS 会有所下降，而在几分钟后开始出现少量的失败事务。</p>
 </li>
 </ul>
@@ -353,7 +353,18 @@ All rights reserved.</span><span class="footer-modification">
 </span> 人次</span></span></footer>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
-
+(function () {
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
 </script>
                     </section>
                 </div>
