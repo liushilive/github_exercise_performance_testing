@@ -239,7 +239,7 @@
 <ul>
 <li>
 <p>先了解一个而简单的例子</p>
-<p><code class="language-vim">TPS</code> 是<code class="language-vim">每秒事务数</code>，但是事务时要靠虚拟用户做出来的，假如 <code class="language-vim">1</code> 个虚拟用户在 <code class="language-vim">1</code> 秒内完成 <code class="language-vim">1</code> 笔事务，那么 <code class="language-vim">TPS</code> 明显就是 <code class="language-vim">1</code>；</p>
+<p><code class="language-vim">TPS</code> 是<code class="language-vim">每秒事务数</code>，但是事务是要靠虚拟用户做出来的，假如 <code class="language-vim">1</code> 个虚拟用户在 <code class="language-vim">1</code> 秒内完成 <code class="language-vim">1</code> 笔事务，那么 <code class="language-vim">TPS</code> 明显就是 <code class="language-vim">1</code>；</p>
 <p>如果某笔业务响应时间是 <code class="language-vim">1ms</code>, 那么 <code class="language-vim">1</code> 个用户在 <code class="language-vim">1</code> 秒内能完成 <code class="language-vim">1000</code> 笔事务，<code class="language-vim">TPS</code> 就是 <code class="language-vim">1000</code> 了；</p>
 <p>如果某笔业务响应时间是 <code class="language-vim">1s</code>, 那么 <code class="language-vim">1</code> 个用户在 <code class="language-vim">1</code> 秒内只能完成 <code class="language-vim">1</code> 笔事务，要想达到 <code class="language-vim">1000TPS</code>，至少需要 <code class="language-vim">1000</code> 个用户；</p>
 </li>
