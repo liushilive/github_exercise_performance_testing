@@ -71,11 +71,25 @@
                         <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>性能测试工具</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>LoadRunner VS JMeter</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
                         <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>性能测试工具</h1>
 <p>日行千里需有千里马，要想做好性能测试也需要一款好的工具来支持。软件性能测试工具分为三类：商业收费工具、开源免费工具、自主开发工具。</p>
-<ul>
-<li>商业收费工具有 <code class="language-vim">QA Load</code>、<code class="language-vim">SilkPerformer</code>、<code class="language-vim">LoadRunner</code>、<code class="language-vim">WebRunner</code>、<code class="language-vim">IBM Rational Performance Tester</code> 等。</li>
-<li>开源免费工具有 <code class="language-vim">Apache JMeter</code>、<code class="language-vim">AutoBench</code>、<code class="language-vim">ApacheBench</code>、<code class="language-vim">Pylot</code> 等。</li>
-<li>自主开发工具成本高，稳定性与可靠性也容易存在问题。</li>
-</ul>
+<p>工欲善其事必先利其器，性能测试时模拟大量负载需要工具帮忙，市面上可供使用的负载工具繁多，如何选择呢？</p>
+<p>首先我们要明白负载工具是帮助我们来模拟负载的，对于性能测试来说，工具并不是核心，分析、评估、找出性能问题才是核心，这些是主观因素；工具是客户因素，自然要降低其对结果的影响，所以工具选择时我们有几个方面要考虑。</p>
+<ol>
+<li>专业、稳定、高效，比如 LoadRunner, 工业级性能负载工具。</li>
+<li>简单易上手，在测试脚本上不用花太多时间。</li>
+<li>有技术支持，文档完善，不用在疑难问题上花费时间，集中精力在性能分析上。</li>
+<li>要考虑投入产出比，比如我们可以选择免费开源的 JMeter。当然有时候自研或者使用开源不一定比商业工具更省钱，因为要做技术上的投资，时间上的投资。</li>
+</ol>
+<p>常见性能工具：</p>
+<ol>
+<li>HP 公司的 LoadRunner;</li>
+<li>Apache JMeter （开源）</li>
+<li>Grinder （开源）</li>
+<li>Compu Ware 公司的 QALoad</li>
+<li>Microsoft 公司的 WAS</li>
+<li>RadView 公司的 WebLoad</li>
+<li>IBM 公司的 RPT</li>
+</ol>
+<p>总之我们要认清性能测试的核心是性能分析，重要的是思想，实现方式，不在意工具；大家本着简单、稳定、专业、高效、省钱的原则来选择工具。</p>
 <h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. LoadRunner VS JMeter</h2>
 <table>
 <thead>
@@ -187,7 +201,7 @@ All rights reserved.</span><span class="footer-modification">
                 "next_page_link": "../LR/index.html"
             },
             "basePath": "../..",
-            "js": {'prism': ['../../../asserts/lsbook/prismjs/clipboard.min.js', '../../../asserts/lsbook/prismjs/prism.js']}
+            "js": {}
         });
     });
 </script>
