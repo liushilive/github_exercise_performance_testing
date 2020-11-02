@@ -96,7 +96,18 @@
 </ol>
 <h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 性能测试通过标准</h2>
 <p>性能测试从需求、设计、准备、执行到分析，最后需要判断性能测试是否通过，性能测试工程师最终需要考虑很多因素，判断的标准相应也会有多个维度。性能测试通过标准包括服务端性能、前端性能和用户体验性能，常规通过标准如表所示。</p>
-<p><a data-lightbox="1" href="../../lsbook_import_img/2020-08-05-14-38-00.png"><img src="../../lsbook_import_img/2020-08-05-14-38-00.png" alt="Web 项目性能测试通过标准" title="Web 项目性能测试通过标准" /></a></p>
+<!-- ![Web 项目性能测试通过标准](../../lsbook_import_img/2020-08-05-14-38-00.png) -->
+<table>
+  <th>类别<th>判断维度<th>不通过<th>通过<th>备注
+  <tr><td rowspan=7>通用互联网服务端性能<td>超时概率<td> > 0.5‰ <td> < 0.5‰ <td>性能测试团队根据通过标准，判定被测性能点不通过。没有绝对的标准，有专家组或项目负责人来评判。
+  <tr><td>错误概率<td> > 0.5‰ <td> < 0.5‰ <td rowspan=6>网页响应时间一般根据（1s 优秀、3s 普通、5s 忍受极限）来判断。假设 5s 为客户忍受的上限，特殊功能另议。
+  <tr><td>TPS<td>小于期望高峰值<td>大于期望高峰值
+  <tr><td>CPU 利用率<td> > 75% <td> < 75%
+  <tr><td>响应时间<td>大于期望时间<td>小于期望时间
+  <tr><td>JVM 内存使用率<td> > 80% <td> < 80%
+  <tr><td>Full GC 频率<td>平均小于半小时 1 次<td>平均大于半小时 1 次
+  <tr><td>前端页面性能<td>YSlow 评定<td>YSlow 评定 C 级以下<td>YSlow 评定 C 级，或 C 级以上<td>
+</table>
 
                         <footer class="page-footer">
 <span class="copyright">© 2020 刘士. All rights reserved.</span>
