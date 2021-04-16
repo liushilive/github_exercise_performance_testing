@@ -69,9 +69,17 @@
                 <div class="search-noresults">
                     <section class="normal markdown-section">
                         <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>软件性能测试方法论</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>SEI 负载测试计划过程</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>2. </b>RBI 方法</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>3. </b>性能测试基本过程</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>4. </b>测试体系活动描述</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_6'><b>4.1. </b>需求阶段</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_10'><b>4.2. </b>准备阶段</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_12'><b>4.3. </b>执行阶段</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_14'><b>4.4. </b>报告阶段</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_16'><b>4.5. </b>总结阶段</a></li></ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_18'><b>5. </b>性能测试需求分析</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
-                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>软件性能测试方法论</h1>
+                        <h1 id="anchor_1">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>软件性能测试方法论
+</h1>
 <p>性能测试方法主要包括 SEI 负载测试计划过程和 RBI 方法。</p>
-<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. SEI 负载测试计划过程</h2>
+<h2 id="anchor_2">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1. SEI 负载测试计划过程
+</h2>
 <p>SEI 负载测试计划过程（SEI Load Testing Planning Process）是一个关注于负载测试计划的方法，其目标是产生<code class="language-vim">清晰、易理解、可验证的负载测试计划</code>。SEI 负载测试计划过程包括 6 个关注的区域（Area）：<code class="language-vim">目标</code>、<code class="language-vim">用户</code>、<code class="language-vim">用例</code>、<code class="language-vim">生产环境</code>、<code class="language-vim">测试环境</code>和<code class="language-vim">测试场景</code>。</p>
 <p>SEI 负载测试计划过程将以这 6 个区域作为负载测试计划需要重点关注和考虑的内容，其重点关注以下几个方面的内容。</p>
 <ol>
@@ -90,7 +98,11 @@
 </ol>
 <p>从 SEI 负载测试计划过程的描述中可以看到，SEI 负载测试计划过程给出了负载测试需要关注的重点区域，但严格来说，其并不能被称为具体的方法论，因为其仅仅给出了对测试计划过程的一些关注内容，而没有能够形成实际的可操作的过程。同功能测试一样，性能测试也必须经历<code class="language-vim">测试需求</code>、<code class="language-vim">测试设计</code>、<code class="language-vim">测试执行</code>、<code class="language-vim">测试分析</code>等阶段，但由于性能测试自身的特殊性（例如，需要引入工具，分析阶段相对重要），性能测试过程又不能完全套用功能测试过程。</p>
 <p>SEI 负载测试计划过程在负载测试需要关注的具体内容上提供了参考，但其并不是一个完整的测试过程。</p>
-<h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. RBI 方法</h2>
+<h2 id="anchor_3">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2. RBI 方法
+</h2>
 <p>RBI（Rapid Bottleneck Identify）方法是一种用于快速识别系统性能瓶颈的方法。该方法基于以下一些事实：</p>
 <ol>
 <li>
@@ -106,7 +118,11 @@
 <p>RBI 方法首先访问服务器上的<code class="language-vim">小页面</code>和<code class="language-vim">简单应用</code>，从应用服务器、网络等基础的层次上了解系统吞吐量表现；其次选择不同的场景，设定不同的并发用户数，使其吞吐量保持基本一致的增长趋势，通过不断增加并发用户数和吞吐量，观察系统的性能表现。</p>
 <p>在确定具体的性能瓶颈时，RBI 将性能瓶颈的定位按照一种<code class="language-vim">自上而下</code>的分析方式进行分析，首先确定是由<code class="language-vim">并发</code>还是由<code class="language-vim">吞吐量</code>引发的性能表现限制，然后从<code class="language-vim">网络</code>、<code class="language-vim">数据库</code>、<code class="language-vim">应用服务器</code>和<code class="language-vim">代码</code>本身 4 个环节确定系统性能具体的瓶颈。</p>
 <p>RBI 方法在性能瓶颈的定位过程中能发挥良好的作用，其对性能分析和瓶颈定位的方法值得借鉴，但其也不是完整的性能测试过程。</p>
-<h2 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>3. 性能测试基本过程</h2>
+<h2 id="anchor_4">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>3. 性能测试基本过程
+</h2>
 <p>面试性能测试时，经常会问一个问题：<code class="language-vim">能否简单地介绍一下性能测试的过程？</code>多数人的回答都不咋地，原因是很多人不清楚性能测试以至于回答问题的思路混乱。其实，大家在应聘性能测试职位时，必须要清楚这个职位是具体做哪些工作的，并且按照工作的流程把每一个环节都表述清楚。</p>
 <p>下面结合过往公司实际工作流程与阿里云性能测试流程给大家介绍一下，性能测试的过程到底是如何进行的。</p>
 <p>本体系将性能测试工作共分为：<code class="language-vim">需求阶段</code>、<code class="language-vim">准备阶段</code>、<code class="language-vim">执行阶段</code>、<code class="language-vim">报告阶段</code>、<code class="language-vim">总结阶段</code> 5 部分。力求简单、实用、有效的指导当前的性能测试工作活动。</p>
@@ -160,68 +176,124 @@
 <p>7 项主要活动：<code class="language-vim">项目启动</code>、<code class="language-vim">需求调研与分析</code>、<code class="language-vim">项目计划制定</code>、<code class="language-vim">性能测试准备</code>、<code class="language-vim">性能测试执行</code>、<code class="language-vim">性能测试报告</code>、<code class="language-vim">项目总结</code></p>
 </li>
 </ul>
-<h2 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>4. 测试体系活动描述</h2>
-<h3 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>4.1. 需求阶段</h3>
-<h4 id="anchor_7"><a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7"><i aria-hidden="true" class="fa fa-link"></i></a>4.1.1. 活动 1—项目启动</h4>
+<h2 id="anchor_5">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4. 测试体系活动描述
+</h2>
+<h3 id="anchor_6">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.1. 需求阶段
+</h3>
+<h4 id="anchor_7">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.1.1. 活动 1—项目启动
+</h4>
 <p><a data-lightbox="1" href="../../lsbook_import_img/2019-10-04-12-15-52.png"><img src="../../lsbook_import_img/2019-10-04-12-15-52.png" alt="项目启动" title="项目启动" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件 5-1-1-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-1-1.docx">性能测试需求</a>》</li>
-<li>附件 5-1-1-2：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-1-2.docx">项目启动会议记录</a>》</li>
-<li>附件 5-1-1-3：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-1-3.docx">性能测试需求分析报告</a>》</li>
+<li>附件 5-1-1-1：《<a target=_Blank href="../../docs/附件5-1-1-1.docx">性能测试需求</a>》</li>
+<li>附件 5-1-1-2：《<a target=_Blank href="../../docs/附件5-1-1-2.docx">项目启动会议记录</a>》</li>
+<li>附件 5-1-1-3：《<a target=_Blank href="../../docs/附件5-1-1-3.docx">性能测试需求分析报告</a>》</li>
 </ul>
-<h4 id="anchor_8"><a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8"><i aria-hidden="true" class="fa fa-link"></i></a>4.1.2. 活动 2－需求调研与分析</h4>
+<h4 id="anchor_8">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.1.2. 活动 2－需求调研与分析
+</h4>
 <p><a data-lightbox="2" href="../../lsbook_import_img/2019-10-04-12-21-10.png"><img src="../../lsbook_import_img/2019-10-04-12-21-10.png" alt="活动属性" title="活动属性" /></a></p>
 <p><a data-lightbox="3" href="../../lsbook_import_img/2019-10-04-12-21-26.png"><img src="../../lsbook_import_img/2019-10-04-12-21-26.png" alt="活动子流程图" title="活动子流程图" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-1-2-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-2-1.docx">性能测试需求调研大纲</a>》</li>
-<li>附件5-1-2-2：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-2-2.docx">性能测试需求分析报告</a>》</li>
+<li>附件5-1-2-1：《<a target=_Blank href="../../docs/附件5-1-2-1.docx">性能测试需求调研大纲</a>》</li>
+<li>附件5-1-2-2：《<a target=_Blank href="../../docs/附件5-1-2-2.docx">性能测试需求分析报告</a>》</li>
 </ul>
-<h4 id="anchor_9"><a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9"><i aria-hidden="true" class="fa fa-link"></i></a>4.1.3. 活动 3－项目计划制定</h4>
+<h4 id="anchor_9">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.1.3. 活动 3－项目计划制定
+</h4>
 <p><a data-lightbox="4" href="../../lsbook_import_img/2019-10-04-12-22-46.png"><img src="../../lsbook_import_img/2019-10-04-12-22-46.png" alt="活动属性" title="活动属性" /></a></p>
 <p><a data-lightbox="5" href="../../lsbook_import_img/2019-10-04-12-23-11.png"><img src="../../lsbook_import_img/2019-10-04-12-23-11.png" alt="子活动流程图" title="子活动流程图" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-1-3-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-1-3-1.mpp">性能测试项目工作计划</a>》</li>
+<li>附件5-1-3-1：《<a target=_Blank href="../../docs/附件5-1-3-1.mpp">性能测试项目工作计划</a>》</li>
 </ul>
-<h3 id="anchor_10"><a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10"><i aria-hidden="true" class="fa fa-link"></i></a>4.2. 准备阶段</h3>
-<h4 id="anchor_11"><a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11"><i aria-hidden="true" class="fa fa-link"></i></a>4.2.1. 活动 4—性能测试准备</h4>
+<h3 id="anchor_10">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.2. 准备阶段
+</h3>
+<h4 id="anchor_11">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.2.1. 活动 4—性能测试准备
+</h4>
 <p><a data-lightbox="6" href="../../lsbook_import_img/2019-10-04-12-28-36.png"><img src="../../lsbook_import_img/2019-10-04-12-28-36.png" alt="活动属性" title="活动属性" /></a></p>
 <p><a data-lightbox="7" href="../../lsbook_import_img/2019-10-04-12-28-48.png"><img src="../../lsbook_import_img/2019-10-04-12-28-48.png" alt="子活动描述" title="子活动描述" /></a></p>
 <p><a data-lightbox="8" href="../../lsbook_import_img/2019-10-04-12-30-47.png"><img src="../../lsbook_import_img/2019-10-04-12-30-47.png" alt="子活动流程图" title="子活动流程图" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-2-1-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-2-1-1.docx">性能测试技术方案</a>》</li>
-<li>附件5-2-1-2：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-2-1-2.docx">性能测试方案样例</a>》</li>
+<li>附件5-2-1-1：《<a target=_Blank href="../../docs/附件5-2-1-1.docx">性能测试技术方案</a>》</li>
+<li>附件5-2-1-2：《<a target=_Blank href="../../docs/附件5-2-1-2.docx">性能测试方案样例</a>》</li>
 </ul>
-<h3 id="anchor_12"><a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12"><i aria-hidden="true" class="fa fa-link"></i></a>4.3. 执行阶段</h3>
-<h4 id="anchor_13"><a class="anchor-navigation-ex-anchor" href="#anchor_13" name="anchor_13"><i aria-hidden="true" class="fa fa-link"></i></a>4.3.1. 活动 5—性能测试执行</h4>
+<h3 id="anchor_12">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.3. 执行阶段
+</h3>
+<h4 id="anchor_13">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_13" name="anchor_13">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.3.1. 活动 5—性能测试执行
+</h4>
 <p><a data-lightbox="9" href="../../lsbook_import_img/2019-10-04-12-32-38.png"><img src="../../lsbook_import_img/2019-10-04-12-32-38.png" alt="活动属性" title="活动属性" /></a></p>
 <p><a data-lightbox="10" href="../../lsbook_import_img/2019-10-04-12-32-49.png"><img src="../../lsbook_import_img/2019-10-04-12-32-49.png" alt="子活动流程图" title="子活动流程图" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-3-1-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-3-1-1.xlsx">性能测试执行日志记录</a>》</li>
-<li>附件5-3-1-2：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-3-1-2.xls">性能测试结果与缺陷跟踪</a>》</li>
+<li>附件5-3-1-1：《<a target=_Blank href="../../docs/附件5-3-1-1.xlsx">性能测试执行日志记录</a>》</li>
+<li>附件5-3-1-2：《<a target=_Blank href="../../docs/附件5-3-1-2.xls">性能测试结果与缺陷跟踪</a>》</li>
 </ul>
-<h3 id="anchor_14"><a class="anchor-navigation-ex-anchor" href="#anchor_14" name="anchor_14"><i aria-hidden="true" class="fa fa-link"></i></a>4.4. 报告阶段</h3>
-<h4 id="anchor_15"><a class="anchor-navigation-ex-anchor" href="#anchor_15" name="anchor_15"><i aria-hidden="true" class="fa fa-link"></i></a>4.4.1. 活动 6—性能测试报告</h4>
+<h3 id="anchor_14">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_14" name="anchor_14">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.4. 报告阶段
+</h3>
+<h4 id="anchor_15">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_15" name="anchor_15">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.4.1. 活动 6—性能测试报告
+</h4>
 <p><a data-lightbox="11" href="../../lsbook_import_img/2019-10-04-12-34-56.png"><img src="../../lsbook_import_img/2019-10-04-12-34-56.png" alt="活动属性" title="活动属性" /></a></p>
 <p><a data-lightbox="12" href="../../lsbook_import_img/2019-10-04-12-35-09.png"><img src="../../lsbook_import_img/2019-10-04-12-35-09.png" alt="子活动流程图" title="子活动流程图" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-4-1-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-4-1-1.docx">性能测试报告</a>》</li>
-<li>附件5-4-1-2：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-4-1-2.docx">性能测试报告样例</a>》</li>
+<li>附件5-4-1-1：《<a target=_Blank href="../../docs/附件5-4-1-1.docx">性能测试报告</a>》</li>
+<li>附件5-4-1-2：《<a target=_Blank href="../../docs/附件5-4-1-2.docx">性能测试报告样例</a>》</li>
 </ul>
-<h3 id="anchor_16"><a class="anchor-navigation-ex-anchor" href="#anchor_16" name="anchor_16"><i aria-hidden="true" class="fa fa-link"></i></a>4.5. 总结阶段</h3>
-<h4 id="anchor_17"><a class="anchor-navigation-ex-anchor" href="#anchor_17" name="anchor_17"><i aria-hidden="true" class="fa fa-link"></i></a>4.5.1. 活动 7—项目总结</h4>
+<h3 id="anchor_16">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_16" name="anchor_16">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.5. 总结阶段
+</h3>
+<h4 id="anchor_17">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_17" name="anchor_17">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4.5.1. 活动 7—项目总结
+</h4>
 <p><a data-lightbox="13" href="../../lsbook_import_img/2019-10-04-12-36-30.png"><img src="../../lsbook_import_img/2019-10-04-12-36-30.png" alt="项目总结" title="项目总结" /></a></p>
 <p>附件下载：</p>
 <ul>
-<li>附件5-5-1-1：《<a target=_Blank href="../../docs/%E9%99%84%E4%BB%B65-5-1-1.docx">XX项目总结</a>》</li>
+<li>附件5-5-1-1：《<a target=_Blank href="../../docs/附件5-5-1-1.docx">XX项目总结</a>》</li>
 </ul>
 <hr />
-<h2 id="anchor_18"><a class="anchor-navigation-ex-anchor" href="#anchor_18" name="anchor_18"><i aria-hidden="true" class="fa fa-link"></i></a>5. 性能测试需求分析</h2>
+<h2 id="anchor_18">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_18" name="anchor_18">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>5. 性能测试需求分析
+</h2>
 <p>性能测试的目的就是把客户的真正需求搞清楚，这是性能测试最关键的过程。</p>
 <p>有很多客户对性能测试是不了解的，客户可能会提出的<code class="language-vim">我们需要对所有的功能都进行性能测试</code>、<code class="language-vim">系统用户登录响应时间小于 3 秒</code>、<code class="language-vim">系统支持 10 万用户并发访问</code>等要求。那么这些需求是否存在什么问题呢？我们来分析下：</p>
 <ol>

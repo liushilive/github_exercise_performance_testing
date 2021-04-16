@@ -69,8 +69,16 @@
                 <div class="search-noresults">
                     <section class="normal markdown-section">
                         <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>LoadRunner</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>基本组成</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>2. </b>LoadRunner 术语</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>3. </b>LoadRunner Vuser 技术</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>4. </b>LoadRunner 测试过程</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
-                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>LoadRunner</h1>
-<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 基本组成</h2>
+                        <h1 id="anchor_1">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>LoadRunner
+</h1>
+<h2 id="anchor_2">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1. 基本组成
+</h2>
 <p>LoadRunner 主要由 <code class="language-vim">Virtual User Generator</code>、<code class="language-vim">Controller</code>、<code class="language-vim">Load Generator</code>和<code class="language-vim">Analysis</code>四部分构成。</p>
 <ul>
 <li>
@@ -97,7 +105,11 @@
 <p>用于查看、剖析和比较性能结果。</p>
 </li>
 </ul>
-<h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. LoadRunner 术语</h2>
+<h2 id="anchor_3">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2. LoadRunner 术语
+</h2>
 <ul>
 <li>
 <p>场景（Scenario）</p>
@@ -120,7 +132,11 @@
 <p>可以在 Vuser 脚本中插入<code class="language-vim">集合点</code>来模拟服务器上较重的用户负载。<code class="language-vim">集合点</code>指示 Vuser 在测试执行期间等待，直到多个 Vuser 在某一点到达，以使他们可以并行执行某个任务。例如，要模拟银行服务器的峰值负载，可以插入一个集合点来指示 100 个 Vuser 同时往他们的帐户存入现金。</p>
 </li>
 </ul>
-<h2 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>3. LoadRunner Vuser 技术</h2>
+<h2 id="anchor_4">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>3. LoadRunner Vuser 技术
+</h2>
 <p>在每个 Windows 负载生成器上，需要安装<code class="language-vim">远程代理调度程序（进程）</code>和 LoadRunner 代理。</p>
 <p><a data-lightbox="3" href="../../lsbook_import_img/2019-10-07-12-51-29.png"><img src="../../lsbook_import_img/2019-10-07-12-51-29.png" alt="vuser" title="vuser" /></a></p>
 <ul>
@@ -133,7 +149,11 @@
 <p>LoadRunner 代理可使 Controller 和负载生成器互相通信。运行场景时，Controller 指示远程代理调度程序（进程）启动 LoadRunner 代理。该代理根据从 Controller 接收到的指令来初始化、运行、暂停和停止各个 Vuser。同时，该代理还将各个 Vuser 的状态数据传回 Controller。</p>
 </li>
 </ul>
-<h2 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>4. LoadRunner 测试过程</h2>
+<h2 id="anchor_5">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4. LoadRunner 测试过程
+</h2>
 <p>负载测试一般包括 5 个阶段：<code class="language-vim">规划测试</code>、<code class="language-vim">创建 Vuser 脚本</code>、<code class="language-vim">创建场景</code>、<code class="language-vim">运行场景</code>、<code class="language-vim">监视场景</code>和<code class="language-vim">分析测试结果</code>。</p>
 <ul>
 <li>

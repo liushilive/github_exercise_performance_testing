@@ -69,7 +69,11 @@
                 <div class="search-noresults">
                     <section class="normal markdown-section">
                         <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>软件性能的基本指标</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>业务指标</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>1.1. </b>响应时间 Response Time</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>1.2. </b>系统处理能力</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>1.3. </b>吞吐量 Throughput</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_6'><b>1.4. </b>并发用户数 Virtual User</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_7'><b>1.5. </b>最大并发用户数</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_8'><b>1.6. </b>PV</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_9'><b>1.7. </b>UV</a></li></ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_10'><b>2. </b>资源指标</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_11'><b>2.1. </b>处理器</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_12'><b>2.2. </b>内存 RAM Memory</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_13'><b>2.3. </b>磁盘 I/O</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_14'><b>2.4. </b>带宽</a></li></ul></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
-                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>软件性能的基本指标</h1>
+                        <h1 id="anchor_1">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>软件性能的基本指标
+</h1>
 <p>性能测试指标细分为<code class="language-vim">业务指标</code>、<code class="language-vim">资源指标</code>、<code class="language-vim">应用指标</code>、<code class="language-vim">前端指标</code>。</p>
 <ul>
 <li>
@@ -92,10 +96,18 @@
 <p>性能测试指标总的可以划分为<code class="language-vim">业务指标</code>和<code class="language-vim">系统资源指标</code>两大部分。对于一般用户而言，对于系统性能的要求主要是<code class="language-vim">业务指标</code>，而<code class="language-vim">系统资源指标</code>是系统性能的一个反应，它可以帮助分析系统性能瓶颈、优化系统或者发现一些隐性问题。</p>
 <p>对于业务指标的要求主要是请求<code class="language-vim">响应时间</code>、<code class="language-vim">最大并发量</code>等。</p>
 <p>对于系统资源的指标，例如，<code class="language-vim">资源使用率</code>，是指在系统负载运行期间，数据库服务器、应用服务器、Web 服务器的 CPU、内存、硬盘、外置存储、网络带宽的使用率。低于 <code class="language-vim">20%</code> 的使用率为资源<code class="language-vim">空闲</code>，<code class="language-vim">20% ~ 60%</code> 的使用率为资源使用<code class="language-vim">稳定</code>，<code class="language-vim">60% ~ 80%</code> 的使用率表示资源使用<code class="language-vim">饱和</code>，超过 <code class="language-vim">80%</code> 的资源使用率必须尽快进行资源<code class="language-vim">调整</code>和<code class="language-vim">优化</code>。</p>
-<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 业务指标</h2>
+<h2 id="anchor_2">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1. 业务指标
+</h2>
 <p>业务指标是对软件系统业务处理能力及响应速度的衡量值，是软件系统性能表现的最直观体现。</p>
 <p>下面来了解一些性能测试中常见的业务指标。</p>
-<h3 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>1.1. 响应时间 Response Time</h3>
+<h3 id="anchor_3">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.1. 响应时间 Response Time
+</h3>
 <p>要理解响应时间，首先需引入<code class="language-vim">事务</code>的概念。事务是指用户在客户端做一种或多种业务所需要的<code class="language-vim">操作集</code>。</p>
 <p>响应时间就是对事务操作时间的测量。</p>
 <p><code class="language-vim">事务响应时间</code> Transaction Response Time 从客户端发起一个请求开始，到客户端接收到从服务器端返回的响应结束，整个过程所耗费的时间。此响应时间不包含客户端 GUI 时间（例如浏览器解释页面所消耗的时间）。</p>
@@ -137,7 +149,11 @@
 </ul>
 </li>
 </ul>
-<h3 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>1.2. 系统处理能力</h3>
+<h3 id="anchor_4">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.2. 系统处理能力
+</h3>
 <p>系统处理能力是指系统在利用系统硬件平台和软件平台进行信息处理的能力。</p>
 <p>系统处理能力通过<code class="language-vim">系统每秒钟能够处理的交易数量</code>来评价，交易有两种理解：</p>
 <ul>
@@ -187,7 +203,11 @@
 <p>TPS 可以参照同行业系统和结合具体业务，中小企业 TPS 值为 <code class="language-vim">50 ~ 1K 笔/秒</code>，银行 TPS 值为 <code class="language-vim">1K ~ 5W 笔/秒</code>，淘宝 TPS 值为 <code class="language-vim">3W~30W 笔/秒</code>。</p>
 </li>
 </ul>
-<h3 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>1.3. 吞吐量 Throughput</h3>
+<h3 id="anchor_5">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.3. 吞吐量 Throughput
+</h3>
 <p>吞吐量为<code class="language-vim">单位时间内系统处理的客户请求的数量</code>，直接体现软件系统的性能承载能力。</p>
 <p>对于交互式应用系统来说，吞吐量反映的是服务器承受的压力；在容量规划的测试中，吞吐量是一个重要指标，它不但反映在中间件、数据库上，更加体现在硬件上。</p>
 <ul>
@@ -206,7 +226,11 @@
 <li><code class="language-vim">吞吐量</code>是指单位时间内系统处理的请求数量，能直接反映服务器承受的压力，是需要重点关注的指标。</li>
 <li><code class="language-vim">吞吐率</code>一般指用户在给定的一秒内从服务器获得的数据量，简而言之就是服务器返回的数据量。</li>
 </ul>
-<h3 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>1.4. 并发用户数 Virtual User</h3>
+<h3 id="anchor_6">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.4. 并发用户数 Virtual User
+</h3>
 <ul>
 <li>系统用户数：简单地说就是该系统的注册用户数</li>
 <li>在线用户数：即登录系统的用户</li>
@@ -215,7 +239,11 @@
 <p>例如一个邮件系统，有 100 个注册用户，那么<code class="language-vim">系统用户数</code>就是 100 个；其中一段时间内有 80 个用户登录使用，在这段时间内<code class="language-vim">在线用户数</code>就是 80。</p>
 <p>但其中有 10 个用户在阅读邮件内容，20 个用户在写邮件，这 30 个用户在此阶段对服务器并没有产生压力。只有产生了请求、提交等业务操作的用户才会对服务器构成压力。</p>
 <p>所以<code class="language-vim">并发用户数</code>是指在系统运行期间同一时刻进行业务操作的用户数量。一般应用系统并发用户数为在线用户数的 <code class="language-vim">10%~20%</code>，但还是要取决于具体的业务逻辑、业务场景。</p>
-<h3 id="anchor_7"><a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7"><i aria-hidden="true" class="fa fa-link"></i></a>1.5. 最大并发用户数</h3>
+<h3 id="anchor_7">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.5. 最大并发用户数
+</h3>
 <p>最大并发用户数是指应用系统在正式环境下所能承受的最大并发用户数量。</p>
 <p>在运行中，如果出现了频繁业务操作失败、响应时间远远超出用户所能承受的最大值或出现了服务器宕机等情况，则说明系统承载量已经超出了最大并发用户数的范围。</p>
 <ul>
@@ -240,16 +268,32 @@
 <p>一般情况下，大型系统（业务量大、机器多）做压力测试，<code class="language-vim">1W ~ 5W</code> 个用户并发，中小型系统做压力测试，<code class="language-vim">5K</code> 个用户并发比较常见。</p>
 </li>
 </ul>
-<h3 id="anchor_8"><a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8"><i aria-hidden="true" class="fa fa-link"></i></a>1.6. PV</h3>
+<h3 id="anchor_8">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.6. PV
+</h3>
 <p><code class="language-vim">PV</code> 即 page view，页面浏览量。</p>
 <p>用户每一次对网站中的每个页面访问均被记录 1 次。用户对同一页面的多次刷新，访问量累计。通常是衡量一个网站甚至一条网络新闻的主要指标。</p>
 <p>与 <code class="language-vim">PV</code> 相关的还有 <code class="language-vim">RV</code>，即<code class="language-vim">重复访问者数量</code>（repeat visitors）。</p>
-<h3 id="anchor_9"><a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9"><i aria-hidden="true" class="fa fa-link"></i></a>1.7. UV</h3>
+<h3 id="anchor_9">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1.7. UV
+</h3>
 <p><code class="language-vim">UV</code> 访问数（Unique Visitor）指<code class="language-vim">独立访客访问数</code>，统计 1 天内访问某站点的用户数（以 cookie 为依据），一台电脑终端为一个访客。</p>
 <p>可以理解成访问某网站的电脑的数量。网站判断来访电脑的身份是通过来访电脑的 cookies 实现的。如果更换了 IP 后但不清除 cookies，再访问相同网站，该网站的统计中 UV 数是不变的。如果用户不保存 cookies 访问、清除了 cookies 或者更换设备访问，计数会加 1。一天内相同的客户端多次访问只计为 1 个访客。</p>
-<h2 id="anchor_10"><a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10"><i aria-hidden="true" class="fa fa-link"></i></a>2. 资源指标</h2>
+<h2 id="anchor_10">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2. 资源指标
+</h2>
 <p>资源指标与硬件资源消耗直接相关，也就是所谓的<code class="language-vim">资源利用率</code>。测试的目的不同，需要统计的系统资源指标也不同，主要包括服务器操作系统资源使用情况、资源消耗情况等。</p>
-<h3 id="anchor_11"><a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11"><i aria-hidden="true" class="fa fa-link"></i></a>2.1. 处理器</h3>
+<h3 id="anchor_11">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2.1. 处理器
+</h3>
 <ol>
 <li>
 <p><code class="language-vim">CPU 占用率</code>：<code class="language-vim">CPU Utilization</code> Linux</p>
@@ -269,7 +313,11 @@
 </ul>
 </li>
 </ol>
-<h3 id="anchor_12"><a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12"><i aria-hidden="true" class="fa fa-link"></i></a>2.2. 内存 RAM Memory</h3>
+<h3 id="anchor_12">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2.2. 内存 RAM Memory
+</h3>
 <ol>
 <li>
 <p><code class="language-vim">内存页交换速率</code>：<code class="language-vim">Paging Rate</code> Linux</p>
@@ -289,7 +337,11 @@
 </ul>
 </li>
 </ol>
-<h3 id="anchor_13"><a class="anchor-navigation-ex-anchor" href="#anchor_13" name="anchor_13"><i aria-hidden="true" class="fa fa-link"></i></a>2.3. 磁盘 I/O</h3>
+<h3 id="anchor_13">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_13" name="anchor_13">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2.3. 磁盘 I/O
+</h3>
 <ol>
 <li>
 <p><code class="language-vim">Disk Rate</code>：<code class="language-vim">磁盘交换率</code> Linux</p>
@@ -309,7 +361,11 @@
 </ol>
 </li>
 </ol>
-<h3 id="anchor_14"><a class="anchor-navigation-ex-anchor" href="#anchor_14" name="anchor_14"><i aria-hidden="true" class="fa fa-link"></i></a>2.4. 带宽</h3>
+<h3 id="anchor_14">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_14" name="anchor_14">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2.4. 带宽
+</h3>
 <p>一般使用计数器 <code class="language-vim">Bytes Total/sec</code> 来度量。<code class="language-vim">Bytes Total/sec</code> 表示为发送和接收字节的速率，包括帧字符在内。判断网络连接速度是否是瓶颈，可以用该计数器的值和目前网络的带宽进行比较。</p>
 <p>判断网络带宽是否是系统运行性能瓶颈的首要条件是，网络带宽是否会影响系统交易执行性能。</p>
 <p>例如，减小网络带宽，并发用户数、响应时间与事务通过率等性能指标是否不能接受；增加网络带宽，并发用户数、响应时间与事务通过率等性能指标会得到明显提高。</p>

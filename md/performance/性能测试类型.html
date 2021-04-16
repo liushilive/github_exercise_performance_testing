@@ -69,29 +69,53 @@
                 <div class="search-noresults">
                     <section class="normal markdown-section">
                         <div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul><li><span class='title-icon fa fa-hand-o-right'></span><a aria-label class='on-toolbar-action' href='' onclick="$('.fa.fa-align-justify').parent()[0].click();">目录</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_1'><b></b>性能测试类型</a></li><ul><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_2'><b>1. </b>压力测试（Stress Testing）</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_3'><b>2. </b>负载测试（Load Testing）</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_4'><b>3. </b>强度测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_5'><b>4. </b>容量测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_6'><b>5. </b>大数据量测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_7'><b>6. </b>基准测试（Benchmark Testing）</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_8'><b>7. </b>并发测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_9'><b>8. </b>稳定性测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_10'><b>9. </b>失效恢复测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_11'><b>10. </b>配置测试</a></li><li><span class='title-icon fa fa-hand-o-right'></span><a href='#anchor_12'><b>11. </b>综合场景测试</a></li></ul></ul></div><a href='#anchor_1' id='anchorNavigationExGoTop'><i class='fa fa-arrow-up'></i></a>
-                        <h1 id="anchor_1"><a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1"><i aria-hidden="true" class="fa fa-link"></i></a>性能测试类型</h1>
+                        <h1 id="anchor_1">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_1" name="anchor_1">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>性能测试类型
+</h1>
 <p>对于性能测试的分类，业界有很多标准，而对每个类型的诠释也有一些差别。</p>
 <p>从狭义来看，性能测试主要用于描述常规的性能测试，是指<strong>通过模拟生产运行的业务压力或用户使用场景来测试系统的性能是否满足生产性能的要求</strong>。</p>
 <p>从广义来看，性能测试则是压力测试、负载测试、强度测试、容量测试、大数据量测试、基准测试等和性能相关的测试的统称。</p>
 <p>性能测试的种类繁多，但是实际执行起来又很难严格区分，所以理解各种分类的特点和概念即可，没必要咬文嚼字。</p>
-<h2 id="anchor_2"><a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2"><i aria-hidden="true" class="fa fa-link"></i></a>1. 压力测试（Stress Testing）</h2>
+<h2 id="anchor_2">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_2" name="anchor_2">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>1. 压力测试（Stress Testing）
+</h2>
 <p>压力测试是指通过逐步增加系统负载，测试系统性能的变化，并最终确定在什么负载条件下系统性能处于<code class="language-vim">失效状态</code>，通过确定一个系统的瓶颈或者不能接受的性能点，来获得系统能提供的最大服务级别的测试。</p>
 <p>压力测试可以理解为没有预期的性能指标，不断地加压，看系统什么时候崩溃，以此来确定系统的瓶颈或者不能接受的性能拐点，以获得系统的最佳并发数、最大并发数。压力测试就好比跑马拉松，看你到底能跑多久，什么时候就坚持不住了。</p>
 <p>压力测试的目的是找出因资源不足或资源争用而导致的错误。压力测试还可用于确定测试对象能够处理的最大工作量。</p>
 <p>压力测试并不是简单地为了一种破坏的快感而去破坏系统，实际上它可以让测试工程师观察系统在出现故障时的反应。系统是不是保存了它出现故障时的状态？是不是它突然间崩溃掉了？它是否只是挂在那儿什么也不做了？在重启之后，它是否有能力恢复到前一个正常运行的状态？</p>
-<h2 id="anchor_3"><a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3"><i aria-hidden="true" class="fa fa-link"></i></a>2. 负载测试（Load Testing）</h2>
+<h2 id="anchor_3">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_3" name="anchor_3">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>2. 负载测试（Load Testing）
+</h2>
 <p>负载测试是指在给定的测试环境下，通过逐步增加系统负载，直到性能指标超过预定指标或某种资源使用已经达到饱和状态，从而确定系统在各种工作负载下的性能容量和处理能力，以及持续正常运行的能力，确定系统所能够承受的<code class="language-vim">最大负载量</code>。负载测试的主要用途是发现系统性能的<code class="language-vim">拐点</code>，寻找系统能够支持的最大用户、业务等处理能力的约束，为系统调优提供数据。</p>
 <p>负载测试可以理解为确定所要测试的业务或系统的负载范围，然后对其进行测试。它的主要目的是验证业务或系统在给定的负载条件下的处理性能。此外，还要关注响应时间、每秒通过事务数和其他相关指标。</p>
 <p>负载测试的目标是确定并确保系统在超出最大预期工作量的情况下仍能正常运行。此外，负载测试还要评估性能特征，例如，响应时间、事务处理速率和其他与时间相关的方面。</p>
-<h2 id="anchor_4"><a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4"><i aria-hidden="true" class="fa fa-link"></i></a>3. 强度测试</h2>
+<h2 id="anchor_4">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_4" name="anchor_4">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>3. 强度测试
+</h2>
 <p>强度测试检查程序对<code class="language-vim">异常</code>的处理能力。压力测试注重的是外界不断施压，而强度测试注重的是系统的极限或者系统异常情况下的测试。</p>
 <p>强度测试是一种特别重要的测试，对系统的稳定性，以及系统未来的扩展空间均具有重要的意义。在这种异常条件下进行的测试，更容易发现系统是否稳定及性能是否容易扩展。</p>
-<h2 id="anchor_5"><a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5"><i aria-hidden="true" class="fa fa-link"></i></a>4. 容量测试</h2>
+<h2 id="anchor_5">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_5" name="anchor_5">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>4. 容量测试
+</h2>
 <p>容量测试是负载测试的补充，用来确定程序的<code class="language-vim">最终临界点</code>。容量测试用于测试系统能够处理的最大会话能力，确定系统可处理同时在线的最大用户数。即使系统处理会话超过了临界点，系统仍需要稳定运行。</p>
 <p>容量测试的目的是通过测试预先分析出反映软件系统应用特征的某项指标的极限值（如最大并发用户数、数据库记录数等），系统在其极限状态下没有出现任何软件故障或仍能保持主要功能正常运行。</p>
 <p>容量测试还将确定测试对象在给定时间内能够持续处理的最大负载或工作量。</p>
 <p>软件容量测试能让软件开发商或用户了解该软件系统的承载能力或提供服务的能力，如某个电子商务网站所能承受的、同时进行交易或结算的在线用户数。知道了系统的实际容量，如果不能满足设计要求，就应该寻求新的技术解决方案，以提高系统的容量。有了对软件负载的准确预测，不仅能对软件系统在实际使用中的性能状况充满信心，同时也可以帮助用户经济地规划应用系统，优化系统的部署。</p>
-<h2 id="anchor_6"><a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6"><i aria-hidden="true" class="fa fa-link"></i></a>5. 大数据量测试</h2>
+<h2 id="anchor_6">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_6" name="anchor_6">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>5. 大数据量测试
+</h2>
 <p>大数据量测试可以分为三种类型：</p>
 <ul>
 <li>针对某些系统存储、传输、统计、查询等业务进行大数据量的独立数据量测试。</li>
@@ -99,14 +123,26 @@
 <li>单独的数据库或文件系统性能测试。</li>
 </ul>
 <p>通常来说，我们采用第二种测试方案，即把多种测试类型结合在一起，以节省测试时间。如果怀疑或者已经发现大数据量情况下存在问题，那么需要采用方案一、三进行深入测试。</p>
-<h2 id="anchor_7"><a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7"><i aria-hidden="true" class="fa fa-link"></i></a>6. 基准测试（Benchmark Testing）</h2>
+<h2 id="anchor_7">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_7" name="anchor_7">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>6. 基准测试（Benchmark Testing）
+</h2>
 <p>基准测试是指在一定的软件、硬件及网络环境下，模拟一定数量的虚拟用户运行一种或多种业务，将测试结果作为基线数据，在系统调优或系统评测的过程中，通过运行相同的业务场景比较测试结果，确定调优的结果是否达到预期效果，或者为系统的选择提供决策数据。基准测试一般基于配置测试，通过配置测试得到数据，并将这个数据作为基准来比较每次调优后的性能是否有所改善。</p>
 <p>通过对被测系统的软硬件环境进行调整，了解不同环境对性能影响的程度，从而找到系统各项资源的最优分配原则。</p>
 <p>基准测试的主要意义：主要用于性能调优。在经过测试获得了基准测试数据后，进行环境调整（包括硬件配置、网络、操作系统、应用服务器、数据库等），再将测试结果与基准数据进行对比，判断调整是否达到最佳状态。</p>
 <hr />
-<h2 id="anchor_8"><a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8"><i aria-hidden="true" class="fa fa-link"></i></a>7. 并发测试</h2>
+<h2 id="anchor_8">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_8" name="anchor_8">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>7. 并发测试
+</h2>
 <p>并发测试可以理解为很多的用户按照预定的场景并发请求某个业务或功能时是否出现并发问题。例如，内存泄露、线程锁、资源争用等，几乎所有的性能测试都会涉及并发测试。并发测试的主要目的是找出并发引起的问题。</p>
-<h2 id="anchor_9"><a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9"><i aria-hidden="true" class="fa fa-link"></i></a>8. 稳定性测试</h2>
+<h2 id="anchor_9">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_9" name="anchor_9">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>8. 稳定性测试
+</h2>
 <p>稳定性测试顾名思义重点在于<code class="language-vim">稳定</code>二字，要想知道系统稳定的情况，就需要长时间运行，在这段时间内观察系统的出错几率、性能变化趋势等。进而大大减少系统上线后的崩溃等现象。一般都会进行所谓的 7×24 小时的稳定性测试。</p>
 <p>但稳定性测试也有和其他分类不一样的地方，这里需要强调以下两点。</p>
 <ol>
@@ -117,13 +153,25 @@
 <p>场景的设计以模拟真实用户的实际操作为佳。</p>
 </li>
 </ol>
-<h2 id="anchor_10"><a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10"><i aria-hidden="true" class="fa fa-link"></i></a>9. 失效恢复测试</h2>
+<h2 id="anchor_10">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_10" name="anchor_10">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>9. 失效恢复测试
+</h2>
 <p>失效恢复测试重在关注系统出现问题后能否根据预先制定的策略恢复，且恢复后能否正常运行。怎么理解呢？很简单，以跑马拉松为例，为了预防出现跑不动的情况，预先准备了一瓶红牛（应该给我广告费），当选手累得躺下后，拿出这瓶红牛一口气喝了，然后你有力量了，恢复了原来的状态，站起来继续跑。这下理解了吧。</p>
 <p>不过失效恢复测试一般是对具有负载均衡的系统进行的，主要是为了测试当系统局部发生故障时，是否会对全局产生大的影响，产生的影响是否在可以接受的范围内，以及用户能否继续使用系统。</p>
 <p>在实际应用过程中，可以模拟一台或几台负载均衡机器出现故障来进行失效恢复测试，但需要注意的是，不仅要关心失效后，用户是否可以正常访问或者恢复后系统是否可以正常工作，也要关注失效后，系统还能支持多少并发用户，以及采用哪些备选方案来快速响应。</p>
-<h2 id="anchor_11"><a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11"><i aria-hidden="true" class="fa fa-link"></i></a>10. 配置测试</h2>
+<h2 id="anchor_11">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_11" name="anchor_11">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>10. 配置测试
+</h2>
 <p>通过对被测系统软硬环境的调整，了解各种不同环境对系统性能的影响程度，从而找到系统各项资源的最优分配原则。 （该方法在每次执行测试时更换，扩充硬件设备，调整网络环境，从而确定各个因素对系统性能的影响，找出影响最大的因素）</p>
-<h2 id="anchor_12"><a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12"><i aria-hidden="true" class="fa fa-link"></i></a>11. 综合场景测试</h2>
+<h2 id="anchor_12">
+    <a class="anchor-navigation-ex-anchor" href="#anchor_12" name="anchor_12">
+        <i aria-hidden="true" class="fa fa-link"></i>
+    </a>11. 综合场景测试
+</h2>
 <p>通过对系统体系机构和功能模块的分析以及对系统用户的分布和使用频率的分析，来构造系统综合场景的测试模型，模拟不同用户执行不同操作。如 10% 的用户执行登录操作，50% 的用户执行查询操作，40% 的用户执行数据库更新操作，最大限度地模拟系统的真实场景，使用户预知系统投入使用后的性能水平。</p>
 
                         <footer class="page-footer">
